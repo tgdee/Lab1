@@ -7,7 +7,7 @@
         <asp:TextBox ID="SearchStudentID" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" Height="425px" Width="300px"></asp:Table>
+        <asp:Table ID="StudentNames" runat="server" Height="425px" Width="300px"></asp:Table>
     </div>
 
 </asp:Content>
