@@ -7,7 +7,6 @@ namespace Lab1
 {
     public class Student
     {
-        public int studentId { get; private set; }
         public string firstName { get; private set; }
         public string lastName { get; private set; }
         public int graduationYear { get; private set; }
@@ -17,10 +16,9 @@ namespace Lab1
         public int internshipNumber { get; private set; }
 
         // Constructor
-        public Student(int studentId, string firstName, string lastName, int graduationYear, 
+        public Student(string firstName, string lastName, int graduationYear, 
             string academicYear, string email, int employerId, int internshipNumber)
         {
-            this.studentId = studentId;
             this.firstName = firstName;
             this.lastName = lastName;
             this.graduationYear = graduationYear;
@@ -33,7 +31,7 @@ namespace Lab1
         public override string ToString()
         {
             String description = "";
-            description += this.studentId + "\t" + this.firstName + "\t" + this.lastName + "\t" +
+            description += this.firstName + "\t" + this.lastName + "\t" +
                 this.graduationYear + "\t" + this.academicYear + "\t" + this.email + "\t" + this.employerId
                 + "\t" + this.internshipNumber;
             return description;
