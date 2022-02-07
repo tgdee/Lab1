@@ -32,6 +32,9 @@
         <asp:TextBox ID="TextBox5" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
         <br />
        <! <asp:Table ID="StudentNames" runat="server" Height="425px" Width="300px"></asp:Table>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Save" />
     </div>
 
 </asp:Content>
