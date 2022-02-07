@@ -11,10 +11,21 @@ namespace Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //As the page loads we want to create an array of students
+                Session["StudentArray"] = new Student[10];
 
+            }
+            
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
         {
 
         }

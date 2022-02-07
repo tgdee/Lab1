@@ -35,6 +35,8 @@
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" Text="Save" />
+        <br />
+        <asp:Button ID="Button2" runat="server" Text="Commit ->" OnClick="Button2_Click"/>
     </div>
 
 
