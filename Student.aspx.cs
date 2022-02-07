@@ -29,6 +29,7 @@ namespace Lab1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
             String studfName = txtStudFisrtN.Text.ToString();
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
@@ -40,6 +41,9 @@ namespace Lab1
             //Reference the stored array and use type cast to store as object
             Student[] studArray = (Student[])Session["StudentArray"];
             int keeper = (int)Session["ArrayKeeper"];
+
+            // Sets studentId equal to number of Student objects as tracked by keeper
+            int studentId = keeper;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
