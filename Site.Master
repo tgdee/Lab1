@@ -49,6 +49,10 @@
                     <a class="navbar-brand" runat="server" href="~/">Student</a>
                     <a class="navbar-brand" runat="server" href="~/">Member</a>
                     <a class="navbar-brand" runat="server" href="~/">Company</a>
+                    <a class="navbar-brand" runat="server" href="~/">Internship</a>
+                    <a class="navbar-brand" runat="server" href="~/">Scholarship</a>
+                    <a class="navbar-brand" runat="server" href="~/">Mentoring Program</a>
+                    <a class="navbar-brand" runat="server" href="~/">Company</a>
                 </div>
             </div>
         </div>
