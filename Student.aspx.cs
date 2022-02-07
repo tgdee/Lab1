@@ -15,6 +15,8 @@ namespace Lab1
             {
                 //As the page loads we want to create an array of students
                 Session["StudentArray"] = new Student[10];
+                Session["ArrayKeeper"] = 0;
+
 
             }
             
@@ -23,6 +25,21 @@ namespace Lab1
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String studfName = txtStudFisrtN.Text.ToString();
+            String studlName = txtStudLastN.Text.ToString();
+            String studMajor = txtMajor.Text.ToString();
+            int studGradYear = int.Parse(intGradYear.Text);
+            int studAcademicYear = int.Parse(intAcademicYear.Text);
+            String studEmail = txtEmail.Text.ToString();
+            int studPhoneNumber = int.Parse(intPhoneNumber.Text);
+
+            //Reference the stored array and use type cast to store as object
+            Student[] studArray = (Student[])Session["StudentArray"];
+            int keeper = (int)Session["ArrayKeeper"];
         }
 
         protected void Button2_Click(object sender, EventArgs e)

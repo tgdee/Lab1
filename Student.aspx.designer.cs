@@ -24,13 +24,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// SearchStudentName control.
+        /// txtStudFisrtN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SearchStudentName;
+        protected global::System.Web.UI.WebControls.TextBox txtStudFisrtN;
 
         /// <summary>
         /// Label2 control.
@@ -42,13 +42,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// SearchStudentID control.
+        /// txtStudLastN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SearchStudentID;
+        protected global::System.Web.UI.WebControls.TextBox txtStudLastN;
 
         /// <summary>
         /// Label3 control.
@@ -60,13 +60,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtMajor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtMajor;
 
         /// <summary>
         /// Label4 control.
@@ -78,13 +78,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// TextBox2 control.
+        /// intGradYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox intGradYear;
 
         /// <summary>
         /// Label5 control.
@@ -96,13 +96,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// TextBox3 control.
+        /// intAcademicYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox intAcademicYear;
 
         /// <summary>
         /// Label6 control.
@@ -114,13 +114,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// TextBox4 control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// Label7 control.
@@ -132,13 +132,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// TextBox5 control.
+        /// intPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox intPhoneNumber;
 
         /// <summary>
         /// StudentNames control.
