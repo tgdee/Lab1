@@ -7,6 +7,7 @@ namespace Lab1
 {
     public class Student
     {
+        public int studentId { get; private set; }
         public string firstName { get; private set; }
         public string lastName { get; private set; }
         public int graduationYear { get; private set; }
@@ -16,9 +17,10 @@ namespace Lab1
         public int internshipNumber { get; private set; }
 
         // Constructor
-        public Student(string firstName, string lastName, int graduationYear, 
+        public Student(int studentId, string firstName, string lastName, int graduationYear, 
             string academicYear, string email, int employerId, int internshipNumber)
         {
+            this.studentId = studentId;
             this.firstName = firstName;
             this.lastName = lastName;
             this.graduationYear = graduationYear;
