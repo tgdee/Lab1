@@ -9,7 +9,8 @@ namespace Lab1
 {
     public partial class _Default : Page
     {
-        public static List<Student> studentsList = new List<Student>();
+        private List<Student> studentList = new List<Student>();
+        private Student studentObj;
             
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,12 +38,13 @@ namespace Lab1
             string studAcademicYear = intAcademicYear.Text.ToString();
             String studEmail = txtEmail.Text.ToString();
 
-            Student studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail, 1, 1);
+            // Student object created using text field data
+            studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail, 
+                1, 1, studMajor);
+            
+            // Student object added to studentList
+            studentList.Add(studentObj);
 
-            studentsList.Add(studentObj);
-
-            // Trying to print array to test
-            Console.WriteLine(studentObj.studentId.ToString() + studentObj.firstName.ToString());
 
 
             //Reference the stored array and use type cast to store as object
