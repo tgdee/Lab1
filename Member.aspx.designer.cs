@@ -24,13 +24,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextBox3 control.
+        /// txtFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtFirstName;
 
         /// <summary>
         /// Label2 control.
@@ -42,13 +42,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// TextBox4 control.
+        /// txtLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtLastName;
 
         /// <summary>
         /// Label3 control.
@@ -60,13 +60,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// TextBox5 control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// Label4 control.

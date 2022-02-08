@@ -40,7 +40,7 @@ namespace Lab1
             int 
 
             //Reference the stored array and use type cast to store as object
-            Student[] studArray = (Student[])Session["StudentArray"];
+            Student[] stuArray = (Student[])Session["StudentArray"];
             int keeper = (int)Session["ArrayKeeper"];
         }
 

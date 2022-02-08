@@ -4,15 +4,15 @@
         <br />
         <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="Label4" runat="server" Text="Phone Number"></asp:Label>
         <br />
@@ -20,7 +20,7 @@
         <br />
         <br />
 
-        <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Save" />
         <br />
         <br />
 
