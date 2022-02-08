@@ -24,7 +24,7 @@
         <br />
         <br />
 
-        <asp:Button ID="Button2" runat="server" Text="Commit ->" OnClick="Button2_Click" />
+        <asp:Button ID="Button2" runat="server" Text="Commit ->" OnClick="Button1_Click" />
     </div>
     <asp:SqlDataSource 
         ID="memberTable" runat="server"  ConnectionString="<%$ ConnectionStrings: Lab1 %>">

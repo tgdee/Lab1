@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Lab1
 {
-    public class Member
+    partial class Member
     {
         public String fName { get; private set; }
         public String lName { get; private set; }
