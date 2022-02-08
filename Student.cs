@@ -33,7 +33,7 @@ namespace Lab1
         public override string ToString()
         {
             String description = "";
-            description += this.studentId + "\t" + this.firstName + "\t" + this.lastName + "\t" +
+            description += this.firstName + "\t" + this.lastName + "\t" +
                 this.graduationYear + "\t" + this.academicYear + "\t" + this.email + "\t" + this.employerId
                 + "\t" + this.internshipNumber;
             return description;

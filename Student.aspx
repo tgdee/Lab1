@@ -38,6 +38,14 @@
         <br />
         <asp:Button ID="Button2" runat="server" Text="Commit ->" OnClick="Button2_Click"/>
     </div>
+     <div>
+        <asp:SqlDataSource 
+        ID="allStudentData" 
+        runat="server" 
+        ConnectionString="<%$ConnectionStrings:Lab1%>" SelectCommand="INSERT INTO Student (StudentID, FirstName,
+            LastName, GraduationYear, AcademicYear, Email, EmployerID, InternshipNumber)
+            VALUES (studentId, txtStudFisrtN, txtStudLastN, txtMajor ;"></asp:SqlDataSource>
+    </div>
 
 
 </asp:Content>
