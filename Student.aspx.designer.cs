@@ -150,30 +150,39 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Table StudentNames;
 
         /// <summary>
-        /// Button1 control.
+        /// SaveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button SaveButton;
 
         /// <summary>
-        /// Button2 control.
+        /// CommitButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button CommitButton;
 
         /// <summary>
-        /// allStudentData control.
+        /// Populate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource allStudentData;
+        protected global::System.Web.UI.WebControls.Button Populate;
+
+        /// <summary>
+        /// studentFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource studentFirstName;
     }
 }
