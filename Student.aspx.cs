@@ -41,7 +41,8 @@ namespace Lab1
 
             studentsList.Add(studentObj);
 
-            Console.WriteLine(studentObj.studentId);
+            // Trying to print array to test
+            Console.WriteLine(studentObj.studentId.ToString() + studentObj.firstName.ToString());
 
 
             //Reference the stored array and use type cast to store as object
