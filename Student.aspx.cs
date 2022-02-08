@@ -36,10 +36,16 @@ namespace Lab1
             int studAcademicYear = int.Parse(intAcademicYear.Text);
             String studEmail = txtEmail.Text.ToString();
             int studPhoneNumber = int.Parse(intPhoneNumber.Text);
+            int 
 
             //Reference the stored array and use type cast to store as object
             Student[] studArray = (Student[])Session["StudentArray"];
             int keeper = (int)Session["ArrayKeeper"];
+
+            //Store the created students into the array
+           // studArray[keeper++] = new Student
+
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)

@@ -20,6 +20,13 @@
         <br />
         <br />
 
-        <asp:Button ID="Button1" runat="server" Text="Save" />
+        <asp:Button ID="Button1" runat="server" Text="Save" OnClick="Button1_Click" />
+        <br />
+        <br />
+
+        <asp:Button ID="Button2" runat="server" Text="Commit ->" OnClick="Button2_Click" />
     </div>
+    <asp:SqlDataSource 
+        ID="memberTable" runat="server"  ConnectionString="<%$ ConnectionStrings: Lab1 %>">
+    </asp:SqlDataSource>
 </asp:Content>

@@ -105,8 +105,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddMember.aspx" />
-    <Content Include="AddStudent.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -162,20 +160,6 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddMember.aspx.cs">
-      <DependentUpon>AddMember.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddMember.aspx.designer.cs">
-      <DependentUpon>AddMember.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddStudent.aspx.cs">
-      <DependentUpon>AddStudent.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddStudent.aspx.designer.cs">
-      <DependentUpon>AddStudent.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Member.aspx.cs">
