@@ -61,7 +61,7 @@ namespace Lab1
             // Disables the populate button after first click
             Populate.Enabled = false;
 
-            this.txtStudFisrtN.Text += "John";
+            this.txtStudFirstN.Text += "John";
             this.txtStudLastN.Text += "Doe";
             this.txtEmail.Text += "fake@fake.com";
             this.txtMajor.Text += "BasketWeaving";
