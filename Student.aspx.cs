@@ -37,7 +37,7 @@ namespace Lab1
             int studAcademicYear = int.Parse(intAcademicYear.Text);
             String studEmail = txtEmail.Text.ToString();
             int studPhoneNumber = int.Parse(intPhoneNumber.Text);
-            int 
+            
 
             //Reference the stored array and use type cast to store as object
             Student[] stuArray = (Student[])Session["StudentArray"];
