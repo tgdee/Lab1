@@ -169,6 +169,9 @@
     <Compile Include="Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Member.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="MentoringProgram.aspx.cs">
       <DependentUpon>MentoringProgram.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
