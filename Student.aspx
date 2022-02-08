@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
         <br />
-        <asp:TextBox ID="txtStudFisrtN" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="txtStudFirstN" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
         <br />
@@ -44,7 +44,7 @@
         runat="server" 
         ConnectionString="<%$ConnectionStrings:Lab1%>" SelectCommand="INSERT INTO Student (StudentID, FirstName,
             LastName, GraduationYear, AcademicYear, Email, EmployerID, InternshipNumber)
-            VALUES (studentId, txtStudFisrtN, txtStudLastN, txtMajor ;"></asp:SqlDataSource>
+            VALUES (studentId, txtStudFirstN, txtStudLastN, txtMajor ;"></asp:SqlDataSource>
     </div>
 
 

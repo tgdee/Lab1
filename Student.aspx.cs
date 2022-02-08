@@ -30,7 +30,7 @@ namespace Lab1
         protected void Button1_Click(object sender, EventArgs e)
         {
             
-            String studfName = txtStudFisrtN.Text.ToString();
+            String studfName = txtStudFirstN.Text.ToString();
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
             int studGradYear = int.Parse(intGradYear.Text);
