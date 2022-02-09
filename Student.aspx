@@ -3,10 +3,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <asp:Table runat="server" Height="173px" Width="312px">
+        <asp:Table runat="server" Height="187px" Width="365px">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
+                    <asp:Label ID="lblFirstName" runat="server" Text="First Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStudFirstN" runat="server"></asp:TextBox>
@@ -14,7 +14,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
+                    <asp:Label ID="lblLastName" runat="server" Text="Last Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStudLastN" runat="server"></asp:TextBox>
@@ -22,7 +22,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblMajor" runat="server" Text="Major"></asp:Label>
+                    <asp:Label ID="lblMajor" runat="server" Text="Major:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
@@ -30,7 +30,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblGraduationYear" runat="server" Text="Graduation Year"></asp:Label>
+                    <asp:Label ID="lblGraduationYear" runat="server" Text="Graduation Year:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="intGradYear" runat="server"></asp:TextBox>
@@ -38,7 +38,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblCurrentYear" runat="server" Text="Current Year"></asp:Label>
+                    <asp:Label ID="lblCurrentYear" runat="server" Text="Current Year:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="intAcademicYear" runat="server"></asp:TextBox>
@@ -46,7 +46,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+                    <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
@@ -54,7 +54,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number"></asp:Label>
+                    <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="intPhoneNumber" runat="server"></asp:TextBox>
