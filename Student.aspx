@@ -71,14 +71,6 @@
         <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
         <asp:Button ID="Populate" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
     </div>
-    <div>
-        <%-- <asp:SqlDataSource 
-        ID="studentFirstName" 
-        runat="server" 
-        ConnectionString="<%$ConnectionStrings:Lab1%>" SelectCommand="INSERT INTO Student (StudentID, FirstName,
-            LastName, GraduationYear, AcademicYear, Email, EmployerID, InternshipNumber)
-            VALUES (studentId, txtStudFisrtN, txtStudLastN, txtMajor ;"></asp:SqlDataSource>--%>
-    </div>
 
 
 </asp:Content>
