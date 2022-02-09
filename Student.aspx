@@ -71,6 +71,13 @@
         <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
         <asp:Button ID="Populate" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
     </div>
+    <div>
+        <asp:SqlDataSource 
+            ID="srcStudent" 
+            SelectCommand="SELECT * FROM Student"
+            ConnectionString="<%$ ConnectionStrings:Lab1 %>"
+            runat="server"></asp:SqlDataSource>
+    </div>
 
 
 </asp:Content>
