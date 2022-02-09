@@ -67,7 +67,7 @@ namespace Lab1
             this.txtStudLastN.Text += "Doe";
             this.txtMajor.Text += "BasketWeaving";
             this.intGradYear.Text += "2022";
-            this.Grade.Text += "Junior";
+            this.txtGrade.Text += "Junior";
             this.txtEmail.Text += "fake@fake.com";
             this.intPhoneNumber.Text += "000";
             
