@@ -35,7 +35,7 @@ namespace Lab1
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
             int studGradYear = int.Parse(intGradYear.Text);
-            string studAcademicYear = Grade.Text.ToString();
+            string studAcademicYear = txtGrade.Text.ToString();
             String studEmail = txtEmail.Text.ToString();
 
             // Student object created using text field data

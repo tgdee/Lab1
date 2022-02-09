@@ -33,6 +33,14 @@
                     <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
+             <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="lblGrade" runat="server" Text="Grade:"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="txtGrade" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblGraduationYear" runat="server" Text="Graduation Year:"></asp:Label>
