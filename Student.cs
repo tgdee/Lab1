@@ -11,20 +11,20 @@ namespace Lab1
         public string firstName { get; private set; }
         public string lastName { get; private set; }
         public int graduationYear { get; private set; }
-        public string academicYear { get; private set; }
+        public string grade { get; private set; }
         public string email { get; private set; }
         public int employerId { get; private set; }
         public int internshipNumber { get; private set; }
 
         // Constructor
         public Student(int studentId, string firstName, string lastName, int graduationYear, 
-            string academicYear, string email, int employerId, int internshipNumber)
+            string grade, string email, int employerId, int internshipNumber)
         {
             this.studentId = studentId;
             this.firstName = firstName;
             this.lastName = lastName;
             this.graduationYear = graduationYear;
-            this.academicYear = academicYear;
+            this.grade = grade;
             this.email = email;
             this.employerId = employerId;
             this.internshipNumber = internshipNumber;

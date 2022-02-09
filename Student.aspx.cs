@@ -34,15 +34,12 @@ namespace Lab1
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
             int studGradYear = int.Parse(intGradYear.Text);
-            string studAcademicYear = intAcademicYear.Text.ToString();
+            string studAcademicYear = Grade.Text.ToString();
             String studEmail = txtEmail.Text.ToString();
 
             Student studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail, 1, 1);
 
             studentsList.Add(studentObj);
-
-            // Trying to print array to test
-            Console.WriteLine(studentObj.studentId.ToString() + studentObj.firstName.ToString());
 
 
             //Reference the stored array and use type cast to store as object
@@ -63,8 +60,10 @@ namespace Lab1
 
             this.txtStudFisrtN.Text += "John";
             this.txtStudLastN.Text += "Doe";
-            this.txtEmail.Text += "fake@fake.com";
             this.txtMajor.Text += "BasketWeaving";
+            this.intGradYear.Text += "2022";
+            this.Grade.Text += "Junior";
+            this.txtEmail.Text += "fake@fake.com";
             this.intPhoneNumber.Text += "000";
             
 

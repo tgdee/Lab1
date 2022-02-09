@@ -15,13 +15,13 @@ namespace Lab1
     {
 
         /// <summary>
-        /// Label1 control.
+        /// FirstNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label FirstNameLabel;
 
         /// <summary>
         /// txtStudFisrtN control.
@@ -33,13 +33,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtStudFisrtN;
 
         /// <summary>
-        /// Label2 control.
+        /// LastNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label LastNameLabel;
 
         /// <summary>
         /// txtStudLastN control.
@@ -51,13 +51,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtStudLastN;
 
         /// <summary>
-        /// Label3 control.
+        /// MajorLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label MajorLabel;
 
         /// <summary>
         /// txtMajor control.
@@ -69,13 +69,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtMajor;
 
         /// <summary>
-        /// Label4 control.
+        /// GradYearLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label GradYearLabel;
 
         /// <summary>
         /// intGradYear control.
@@ -87,31 +87,31 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox intGradYear;
 
         /// <summary>
-        /// Label5 control.
+        /// GradeLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label GradeLabel;
 
         /// <summary>
-        /// intAcademicYear control.
+        /// Grade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox intAcademicYear;
+        protected global::System.Web.UI.WebControls.TextBox Grade;
 
         /// <summary>
-        /// Label6 control.
+        /// EmailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
 
         /// <summary>
         /// txtEmail control.
@@ -123,13 +123,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// Label7 control.
+        /// PhNumLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label PhNumLabel;
 
         /// <summary>
         /// intPhoneNumber control.

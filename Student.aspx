@@ -3,31 +3,31 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
+        <asp:Label ID="FirstNameLabel" runat="server" Text="First Name"></asp:Label>
         <br />
         <asp:TextBox ID="txtStudFisrtN" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
+        <asp:Label ID="LastNameLabel" runat="server" Text="Last Name"></asp:Label>
         <br />
         <asp:TextBox ID="txtStudLastN" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Major"></asp:Label>
+        <asp:Label ID="MajorLabel" runat="server" Text="Major"></asp:Label>
         <br />
         <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label4" runat="server" Text="Graduation Year"></asp:Label>
+        <asp:Label ID="GradYearLabel" runat="server" Text="Graduation Year"></asp:Label>
         <br />
         <asp:TextBox ID="intGradYear" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label5" runat="server" Text="Current Year"></asp:Label>
+        <asp:Label ID="GradeLabel" runat="server" Text="Grade"></asp:Label>
         <br />
-        <asp:TextBox ID="intAcademicYear" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Grade" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label6" runat="server" Text="Email"></asp:Label>
+        <asp:Label ID="EmailLabel" runat="server" Text="Email"></asp:Label>
         <br />
         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label7" runat="server" Text="Phone Number"></asp:Label>
+        <asp:Label ID="PhNumLabel" runat="server" Text="Phone Number"></asp:Label>
         <br />
         <asp:TextBox ID="intPhoneNumber" runat="server"></asp:TextBox>
         <br />
