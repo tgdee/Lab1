@@ -51,14 +51,6 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblCurrentYear" runat="server" Text="Current Year:"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:TextBox ID="intAcademicYear" runat="server"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
-                <asp:TableCell>
                     <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
