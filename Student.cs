@@ -64,11 +64,16 @@ namespace Lab1
             get { return studentId; }
             set { studentId = value; }
         }
-        
+        public string grade
+        {
+            get { return grade; }
+            set { grade = value; }
+        }
+
 
         // Overloaded Constructor
         public Student(int studentId, string firstName, string lastName, int graduationYear, 
-            string academicYear, string email, int employerId, int internshipNumber, string major)
+            string grade, string email, int employerId, int internshipNumber, string major)
         {
             this.studentId = studentId;
             this.firstName = firstName;
