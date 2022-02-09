@@ -6,7 +6,7 @@
         <asp:Table runat="server" Height="187px" Width="365px">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Center">
-                    <asp:Label ID="lblHeaderMessage" runat="server" Text="Student Information"></asp:Label> 
+                    <asp:Label ID="lblHeaderMessage" runat="server" Text="Student Information" Font-Underline="true"></asp:Label> 
                 </asp:TableHeaderCell>
             </asp:TableHeaderRow>
             <asp:TableRow>
