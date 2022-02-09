@@ -15,13 +15,22 @@ namespace Lab1
     {
 
         /// <summary>
-        /// Label1 control.
+        /// lblHeaderMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblHeaderMessage;
+
+        /// <summary>
+        /// lblFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFirstName;
 
         /// <summary>
         /// txtStudFirstN control.
@@ -33,13 +42,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtStudFirstN;
 
         /// <summary>
-        /// Label2 control.
+        /// lblLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblLastName;
 
         /// <summary>
         /// txtStudLastN control.
@@ -51,13 +60,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtStudLastN;
 
         /// <summary>
-        /// Label3 control.
+        /// lblMajor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblMajor;
 
         /// <summary>
         /// txtMajor control.
@@ -69,13 +78,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtMajor;
 
         /// <summary>
-        /// Label4 control.
+        /// lblGraduationYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblGraduationYear;
 
         /// <summary>
         /// intGradYear control.
@@ -87,13 +96,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox intGradYear;
 
         /// <summary>
-        /// Label5 control.
+        /// lblCurrentYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblCurrentYear;
 
         /// <summary>
         /// intAcademicYear control.
@@ -105,13 +114,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox intAcademicYear;
 
         /// <summary>
-        /// Label6 control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
         /// txtEmail control.
@@ -123,13 +132,13 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// Label7 control.
+        /// lblPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label lblPhoneNumber;
 
         /// <summary>
         /// intPhoneNumber control.
@@ -139,15 +148,6 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox intPhoneNumber;
-
-        /// <summary>
-        /// StudentNames control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table StudentNames;
 
         /// <summary>
         /// SaveButton control.

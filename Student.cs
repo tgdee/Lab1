@@ -7,6 +7,7 @@ namespace Lab1
 {
     public class Student
     {
+        // Data Field Declarations
         private string firstName;
         private string lastName;
         private string academicYear;
@@ -17,54 +18,55 @@ namespace Lab1
         private int graduationYear;
         private int studentId;
         
-        public string FirstNameProperty 
+        // Property Declarations
+        public string FirstName 
         {
             get { return firstName; }
             set { firstName = value; }
         }
-        public string LastNameProperty 
+        public string LastName 
         {
             get { return lastName; }
             set { lastName = value; } 
         }
-        public string AcademicYearProperty
+        public string AcademicYear
         {
             get { return academicYear; }
             set { academicYear = value; }
         }
-        public string EmailProperty
+        public string Email
         {
             get { return email; }
             set { email = value; } 
         }
-        public string MajorProperty 
+        public string Major 
         {
             get { return major; }
             set { major = value; } 
         }
-        public int EmployerIdProperty
+        public int EmployerId
         {
             get { return employerId; }
             set { employerId = value; } 
         }
-        public int InternshipNumberProperty 
+        public int InternshipNumber
         {
             get { return internshipNumber; }
             set { internshipNumber = value; } 
         }
-        public int GraduationYearProperty 
+        public int GraduationYear 
         {
             get { return graduationYear; }
-            set {graduationYear = value; } 
+            set { graduationYear = value; } 
         }
-        public int StudentIdProperty 
+        public int StudentId
         {
             get { return studentId; }
-            set {studentId = value; }
+            set { studentId = value; }
         }
         
 
-        // Constructor
+        // Overloaded Constructor
         public Student(int studentId, string firstName, string lastName, int graduationYear, 
             string academicYear, string email, int employerId, int internshipNumber, string major)
         {
