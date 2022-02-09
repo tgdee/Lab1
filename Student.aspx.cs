@@ -9,7 +9,8 @@ namespace Lab1
 {
     public partial class _Default : Page
     {
-        public static List<Student> studentsList = new List<Student>();
+        private List<Student> studentList = new List<Student>();
+        private Student studentObj;
             
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,16 +31,20 @@ namespace Lab1
         {
             int keeper = (int)Session["ArrayKeeper"];
             
-            String studfName = txtStudFisrtN.Text.ToString();
+            String studfName = txtStudFirstN.Text.ToString();
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
             int studGradYear = int.Parse(intGradYear.Text);
             string studAcademicYear = Grade.Text.ToString();
             String studEmail = txtEmail.Text.ToString();
 
-            Student studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail, 1, 1);
+            // Student object created using text field data
+            studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail, 
+                1, 1, studMajor);
+            
+            // Student object added to studentList
+            studentList.Add(studentObj);
 
-            studentsList.Add(studentObj);
 
 
             //Reference the stored array and use type cast to store as object
@@ -58,7 +63,7 @@ namespace Lab1
             // Disables the populate button after first click
             Populate.Enabled = false;
 
-            this.txtStudFisrtN.Text += "John";
+            this.txtStudFirstN.Text += "John";
             this.txtStudLastN.Text += "Doe";
             this.txtMajor.Text += "BasketWeaving";
             this.intGradYear.Text += "2022";

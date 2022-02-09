@@ -7,18 +7,68 @@ namespace Lab1
 {
     public class Student
     {
-        public int studentId { get; private set; }
-        public string firstName { get; private set; }
-        public string lastName { get; private set; }
-        public int graduationYear { get; private set; }
-        public string grade { get; private set; }
-        public string email { get; private set; }
-        public int employerId { get; private set; }
-        public int internshipNumber { get; private set; }
+        // Data Field Declarations
+        private string firstName;
+        private string lastName;
+        private string academicYear;
+        private string email;
+        private string major;
+        private int employerId;
+        private int internshipNumber;
+        private int graduationYear;
+        private int studentId;
+        
+        // Property Declarations
+        public string FirstName 
+        {
+            get { return firstName; }
+            set { firstName = value; }
+        }
+        public string LastName 
+        {
+            get { return lastName; }
+            set { lastName = value; } 
+        }
+        public string AcademicYear
+        {
+            get { return academicYear; }
+            set { academicYear = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; } 
+        }
+        public string Major 
+        {
+            get { return major; }
+            set { major = value; } 
+        }
+        public int EmployerId
+        {
+            get { return employerId; }
+            set { employerId = value; } 
+        }
+        public int InternshipNumber
+        {
+            get { return internshipNumber; }
+            set { internshipNumber = value; } 
+        }
+        public int GraduationYear 
+        {
+            get { return graduationYear; }
+            set { graduationYear = value; } 
+        }
+        public int StudentId
+        {
+            get { return studentId; }
+            set { studentId = value; }
+        }
+        
 
-        // Constructor
+        // Overloaded Constructor
         public Student(int studentId, string firstName, string lastName, int graduationYear, 
-            string grade, string email, int employerId, int internshipNumber)
+            string academicYear, string email, int employerId, int internshipNumber, string major)
         {
             this.studentId = studentId;
             this.firstName = firstName;
@@ -28,6 +78,7 @@ namespace Lab1
             this.email = email;
             this.employerId = employerId;
             this.internshipNumber = internshipNumber;
+            this.major = major;
         }
 
         public override string ToString()
