@@ -9,6 +9,7 @@ namespace Lab1
 {
     public partial class Member : System.Web.UI.Page
     {
+        public static List<Member> membersList = new List<Member>();
         public Member()
         {
         }
@@ -34,16 +35,7 @@ namespace Lab1
             String email = txtEmail.Text.ToString();
 
             //Create the array 
-            Member[] memArray = (Member[])Session["MemberArray"];
-            int keeper = (int)Session["ArrayKeeper"];
-
-            //Add Member to the array
-            memArray[keeper++] = new Member(firstName, lastName, email);
-
-            //Update the index tracker
-            Session["ArrayKeeper"] = keeper;
-
-            Session["MemberArray"] = memArray;
+            Member memObject = new Member(1, firstName, lastName, email);
 
         }
     }
