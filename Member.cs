@@ -7,12 +7,14 @@ namespace Lab1
 {
     partial class Member
     {
+        public int memberID { get; private set; }
         public String fName { get; private set; }
         public String lName { get; private set; }
         public String email { get; private set; }
 
-    public Member(String fName, String lName, String email)
+    public Member(int memberID, String fName, String lName, String email)
         {
+            this.memberID = memberID;
             this.fName = fName;
             this.lName = lName;
             this.email = email;

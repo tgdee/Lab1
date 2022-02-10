@@ -27,30 +27,30 @@ namespace Lab1
         }
 
 
-        //protected void SaveButton_Click(object sender, EventArgs e)
-        //{
-        //    //int keeper = (int)Session["ArrayKeeper"];
+        protected void SaveButton_Click(object sender, EventArgs e)
+        {
+            int keeper = (int)Session["ArrayKeeper"];
 
-        //    //String studfName = txtStudFirstN.Text.ToString();
-        //    //String studlName = txtStudLastN.Text.ToString();
-        //    //String studMajor = txtMajor.Text.ToString();
-        //    //int studGradYear = int.Parse(intGradYear.Text);
-        //    //string studAcademicYear = txtGrade.Text.ToString();
-        //    //String studEmail = txtEmail.Text.ToString();
+            String studfName = txtStudFirstN.Text.ToString();
+            String studlName = txtStudLastN.Text.ToString();
+            String studMajor = txtMajor.Text.ToString();
+            int studGradYear = int.Parse(intGradYear.Text);
+            string studAcademicYear = txtGrade.Text.ToString();
+            String studEmail = txtEmail.Text.ToString();
 
-        //    // Student object created using text field data
-        //    //studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail, 
-        //    //    1, 1, studMajor);
+           // Student object created using text field data
+          Student studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail,
+               1, 1, studMajor);
 
-        //    // Student object added to studentList
-        //    //studentList.Add(studentObj);
+            //Student object added to studentList
+            studentList.Add(studentObj);
 
 
 
-        //    //Reference the stored array and use type cast to store as object
-        //    //Student[] stuArray = (Student[])Session["StudentArray"];
+            //Reference the stored array and use type cast to store as object
+            Student[] stuArray = (Student[])Session["StudentArray"];
 
-        //}
+        }
 
         //protected void CommitButton_Click(object sender, EventArgs e)
         //{
