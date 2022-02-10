@@ -1,25 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab1._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>Student Information Table</h1>
-    <h4>
-        <asp:Literal ID="ltError" runat="server"></asp:Literal></h4>
-    <asp:GridView ID="gvStudent" CssClass="table table-striped color-table" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvStudent_RowDeleting" OnRowEditing="gvStudent_RowEditing" OnRowUpdating="gvStudent_RowUpdating" OnRowCancelingEdit="gvStudent_RowCancelingEdit">
-        <Columns>
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:HiddenField ID="hdnStudentId" runat="server" Value='<%#DataBinder.Eval(Container.DataItem, "StudentID") %>' />
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField DataField="firstName" HeaderText="First Name" />
-            <asp:BoundField DataField="lastName" HeaderText="Last Name" />
-            <asp:CommandField ShowEditButton="true" />
-            <asp:CommandField ShowDeleteButton="true" />
-        </Columns>
-    </asp:GridView>
-    <div class="row student-table">
-        <asp:Button ID="btnAddRow" runat="server" Text="Add New Row" CssClass="btn btn-primary" OnClick="btnAddRow_Click" />
-    </div>
+
 
    <%-- <div class="jumbotron">
         <asp:Table runat="server" Height="187px" Width="365px">
