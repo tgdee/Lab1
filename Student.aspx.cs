@@ -14,7 +14,6 @@ namespace Lab1
     public partial class _Default : Page
     {
         private List<Student> studentList = new List<Student>();
-        Session["var"] = studentList;
         
             
         protected void Page_Load(object sender, EventArgs e)
@@ -34,12 +33,13 @@ namespace Lab1
             String studfName = txtStudFirstN.Text.ToString();
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
-            string studGrade = txtGrade.Text.ToString();
+            int studGradYear = int.Parse(intGradYear.Text);
             string studAcademicYear = txtGrade.Text.ToString();
-            String studEmail = txtEmail.Text.ToString();
+            string studEmail = txtEmail.Text.ToString();
+            string grade = 
 
            // Student object created using text field data
-          Student studentObj = new Student(1, studfName, studlName, studGrade, studAcademicYear, studEmail,
+          Student studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail,
                1, 1, studMajor);
 
             //Student object added to studentList

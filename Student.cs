@@ -13,10 +13,10 @@ namespace Lab1
         private string academicYear;
         private string email;
         private string major;
-        private string employerId;
-        private string internshipNumber;
+        private int employerId;
+        private int internshipNumber;
         private string graduationYear;
-        private string studentId;
+        private int studentId;
         private string grade;
         
         // Property Declarations
