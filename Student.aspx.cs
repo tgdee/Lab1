@@ -14,7 +14,6 @@ namespace Lab1
     public partial class _Default : Page
     {
         private List<Student> studentList = new List<Student>();
-        private Student studentObj;
         
             
         protected void Page_Load(object sender, EventArgs e)
@@ -96,7 +95,7 @@ namespace Lab1
                     dbConnection.Close();
                     dbConnection.Dispose();
                 }
-
+                
             }
         }
 
@@ -160,6 +159,7 @@ namespace Lab1
                 }
             }
         }
+
         //protected void SaveButton_Click(object sender, EventArgs e)
         //{
         //    //int keeper = (int)Session["ArrayKeeper"];
@@ -228,6 +228,34 @@ namespace Lab1
         //{
         //    lblSelectedIndex.Text = lstStudentsAuto.SelectedValue;
         //}
+
+        protected void PopulateButton_Click(object sender, EventArgs e)
+        {
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+
+            using(SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                try
+                {
+                    dbConnection.Open();
+                    SqlCommand command = new SqlCommand("SELECT StudentID, FirstName, LastName, GraduationYear, AcademicYear," +
+                        "Email, EmployerID, InternshipNumber FROM Student ORDER BY StudentID", dbConnection);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+                    for(int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        string studentId = dataTable.Rows[i]["StudentID"].ToString();
+                        string firstName = dataTable.Rows[i]["FirstName"].ToString();
+                        string lastName = dataTable.Rows[i]["LastName"].ToString();
+                        string graduationYear = dataTable.Rows[i]["GraduationYear"].ToString();
+                        string academicYear = dataTable.Rows[i]["Email"].ToString();
+                        
+                        
+                    }
+                }
+            }
+        }
 
         
 

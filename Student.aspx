@@ -85,7 +85,7 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>--%>
-<%--        <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
+        <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
         <br />
         <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
         <div>
@@ -104,7 +104,7 @@
                 OnSelectedIndexChanged="lstStudentsAuto_SelectedIndexChanged"></asp:ListBox>
             <br />
             <asp:Label ID="lblSelectedIndex" runat="server" Text="Index"></asp:Label>
-        </div>--%>
+        </div>
     <div>
         <asp:SqlDataSource 
             ID="srcStudentID" 

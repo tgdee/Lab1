@@ -17,6 +17,7 @@ namespace Lab1
         private int internshipNumber;
         private int graduationYear;
         private int studentId;
+        private string grade;
         
         // Property Declarations
         public string FirstName 
@@ -64,7 +65,7 @@ namespace Lab1
             get { return studentId; }
             set { studentId = value; }
         }
-        public string grade
+        public string Grade
         {
             get { return grade; }
             set { grade = value; }
@@ -75,15 +76,15 @@ namespace Lab1
         public Student(int studentId, string firstName, string lastName, int graduationYear, 
             string grade, string email, int employerId, int internshipNumber, string major)
         {
-            this.studentId = studentId;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.graduationYear = graduationYear;
-            this.grade = grade;
-            this.email = email;
-            this.employerId = employerId;
-            this.internshipNumber = internshipNumber;
-            this.major = major;
+            StudentId = studentId;
+            FirstName = firstName;
+            LastName = lastName;
+            GraduationYear = graduationYear;
+            Grade = grade;
+            Email = email;
+            EmployerId = employerId;
+            InternshipNumber = internshipNumber;
+            Major = major;
         }
 
         public override string ToString()
