@@ -1,13 +1,11 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab1._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-
-   <%-- <div class="jumbotron">
+    <div class="jumbotron">
         <asp:Table runat="server" Height="187px" Width="365px">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Center">
-                    <asp:Label ID="lblHeaderMessage" runat="server" Text="Student Information" Font-Underline="true" Font-Size="Larger"></asp:Label> 
+                    <asp:Label ID="lblHeaderMessage" runat="server" Text="Student Information" Font-Underline="true" Font-Size="Larger"></asp:Label>
                 </asp:TableHeaderCell>
             </asp:TableHeaderRow>
             <asp:TableRow>
@@ -34,7 +32,7 @@
                     <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-             <asp:TableRow>
+            <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblGrade" runat="server" Text="Grade:"></asp:Label>
                 </asp:TableCell>
@@ -66,7 +64,7 @@
                     <asp:TextBox ID="intPhoneNumber" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-        </asp:Table>--%>
+        </asp:Table>
         <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
         <br />
         <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
@@ -87,6 +85,7 @@
             <br />
             <asp:Label ID="lblSelectedIndex" runat="server" Text="Index"></asp:Label>
         </div>
+    </div>
     <div>
         <asp:SqlDataSource 
             ID="srcStudentID" 
@@ -94,6 +93,7 @@
             ConnectionString="<%$ ConnectionStrings:Lab1 %>"
             runat="server"></asp:SqlDataSource>
     </div>
+
 
 
 </asp:Content>
