@@ -45,7 +45,7 @@
                     <asp:Label ID="lblGraduationYear" runat="server" Text="Graduation Year:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="intGradYear" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtGradYear" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -61,31 +61,22 @@
                     <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="intPhoneNumber" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
-        <br />
-        <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="Manual List Population"></asp:Label>
+        <asp:Table runat="server" Width="1000">
+            <asp:ListView ID="ListView1" runat="server"></asp:ListView>
+        </asp:Table>
             <br />
             <asp:Button ID="PopulateButton" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
             <br />
-            <asp:ListBox ID="lstStudentsManual" runat="server"></asp:ListBox>
+            <asp:ListBox ID="lstStudentList" runat="server" Width="1000"></asp:ListBox>
             <br />
             <br />
-            <asp:Label ID="lblAutoPop" runat="server" Text="Auto Populate"></asp:Label>
-            <br />
-            <asp:ListBox ID="lstStudentsAuto" AutoPostBack="true" runat="server"
-                DataSourceID="srcStudentID"
-                DataTextField="StudentID" DataValueField="StudentID"
-                OnSelectedIndexChanged="lstStudentsAuto_SelectedIndexChanged"></asp:ListBox>
-            <br />
-            <asp:Label ID="lblSelectedIndex" runat="server" Text="Index"></asp:Label>
-        </div>
-    </div>
+        <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
+        <br />
+        <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
     <div>
         <asp:SqlDataSource 
             ID="srcStudentID" 

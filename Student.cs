@@ -45,12 +45,12 @@ namespace Lab1
             get { return major; }
             set { major = value; } 
         }
-        public string EmployerId
+        public int EmployerId
         {
             get { return employerId; }
             set { employerId = value; } 
         }
-        public string InternshipNumber
+        public int InternshipNumber
         {
             get { return internshipNumber; }
             set { internshipNumber = value; } 
@@ -60,7 +60,7 @@ namespace Lab1
             get { return graduationYear; }
             set { graduationYear = value; } 
         }
-        public string StudentId
+        public int StudentId
         {
             get { return studentId; }
             set { studentId = value; }
@@ -73,8 +73,8 @@ namespace Lab1
 
 
         // Overloaded Constructor
-        public Student(string studentId, string firstName, string lastName, string graduationYear, 
-            string grade, string email, string employerId, string internshipNumber, string major)
+        public Student(int studentId, string firstName, string lastName, string graduationYear, 
+            string grade, string email, int employerId, int internshipNumber, string major)
         {
             StudentId = studentId;
             FirstName = firstName;
