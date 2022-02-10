@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
-   <%-- <div class="jumbotron">
+    <div class="jumbotron">
         <asp:Table runat="server" Height="187px" Width="365px">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Center">
@@ -66,7 +66,8 @@
                     <asp:TextBox ID="intPhoneNumber" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-        </asp:Table>--%>
+        </asp:Table>
+
         <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
         <br />
         <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />

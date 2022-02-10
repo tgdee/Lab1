@@ -34,12 +34,12 @@ namespace Lab1
             String studfName = txtStudFirstN.Text.ToString();
             String studlName = txtStudLastN.Text.ToString();
             String studMajor = txtMajor.Text.ToString();
-            int studGradYear = int.Parse(intGradYear.Text);
+            string studGrade = txtGrade.Text.ToString();
             string studAcademicYear = txtGrade.Text.ToString();
             String studEmail = txtEmail.Text.ToString();
 
            // Student object created using text field data
-          Student studentObj = new Student(1, studfName, studlName, studGradYear, studAcademicYear, studEmail,
+          Student studentObj = new Student(1, studfName, studlName, studGrade, studAcademicYear, studEmail,
                1, 1, studMajor);
 
             //Student object added to studentList
