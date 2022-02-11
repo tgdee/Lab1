@@ -116,6 +116,7 @@
     <Content Include="MemberTest.aspx" />
     <Content Include="MentoringProgram.aspx" />
     <Content Include="MoreInfo.aspx" />
+    <Content Include="Scholarship.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -207,6 +208,13 @@
     </Compile>
     <Compile Include="MoreInfo.aspx.designer.cs">
       <DependentUpon>MoreInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scholarship.aspx.cs">
+      <DependentUpon>Scholarship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scholarship.aspx.designer.cs">
+      <DependentUpon>Scholarship.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>

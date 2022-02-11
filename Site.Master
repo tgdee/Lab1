@@ -47,7 +47,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" runat="server" href="~/Student.aspx">Student</a>
-                    <a class="navbar-brand" runat="server" href="~/Member.aspx">Member</a>
+                    <a class="navbar-brand" runat="server" href="~/MemberTest.aspx">Member</a>
                     <a class="navbar-brand" runat="server" href="~/Company.aspx">Company</a>
                     <a class="navbar-brand" runat="server" href="~/Internship.aspx">Internship</a>
                     <a class="navbar-brand" runat="server" href="~/Scholarship.aspx">Scholarship</a>

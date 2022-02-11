@@ -19,53 +19,82 @@
             </asp:TableRow>
             <asp:TableRow>
             <asp:TableCell>
-                    <asp:Label ID="Label2" runat="server" Text="Meeting Time:"></asp:Label>
+                    <asp:Label ID="lblCmpName" runat="server" Text="Company Name:"></asp:Label>
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox1" runat="server" Text=""></asp:TextBox>
+                    <asp:TextBox ID="txtName" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
             <asp:TableCell>
-                    <asp:Label ID="Label3" runat="server" Text="Meeting Time:"></asp:Label>
+                    <asp:Label ID="lblEmail" runat="server" Text="Company Email:"></asp:Label>
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox2" runat="server" Text=""></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
             <asp:TableCell>
-                    <asp:Label ID="Label4" runat="server" Text="Meeting Time:"></asp:Label>
+                    <asp:Label ID="lblFirstName" runat="server" Text="First Name:"></asp:Label>
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox3" runat="server" Text=""></asp:TextBox>
+                    <asp:TextBox ID="txtFirstName" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
             <asp:TableCell>
-                    <asp:Label ID="Label5" runat="server" Text="Meeting Time:"></asp:Label>
+                    <asp:Label ID="LblLastName" runat="server" Text="Last Name:"></asp:Label>
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox4" runat="server" Text=""></asp:TextBox>
+                    <asp:TextBox ID="txtLastName" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
             <asp:TableCell>
-                    <asp:Label ID="Label6" runat="server" Text="Meeting Time:"></asp:Label>
+                    <asp:Label ID="lblMemberID" runat="server" Text="Member Last Name:"></asp:Label>
                 </asp:TableCell>
-
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox5" runat="server" Text=""></asp:TextBox>
+                    <asp:DropDownList runat="server" DataSourceID="memberIDsrc" DataTextField="LastName" Height="30px" Width="150px"></asp:DropDownList>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+            <asp:TableCell>
+                    <asp:Label ID="lblStudentID" runat="server" Text="Student Last Name:" ></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList runat="server" DataSourceID="srcStudentID" Height="30px" Width="150px" DataTextField="LastName"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
+         <div style="-webkit-box-align: center">
+            <br />
+            <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->" OnClick="PopulateButton_Click"/>
+            <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save ->" OnClick="SaveButton_Click"/>
+            <br />
+            <br />
+            <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" OnClick="CommitButton_Click"/>
+            <asp:Button ID="ClearButton" runat="server" Text="Clear ->" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" OnClick="ClearButton_Click"/>
+            <br />
+            <br />
+        </div>
 
     </div>
-
+    <asp:SqlDataSource
+         ID="srcStudentID"
+            SelectCommand="SELECT * FROM DBO.Student"
+            ConnectionString="<%$ ConnectionStrings:Lab1 %>"
+            runat="server">
+    </asp:SqlDataSource>
+    <asp:SqlDataSource
+         ID="memberIDsrc"
+            SelectCommand="SELECT * FROM DBO.Member"
+            ConnectionString="<%$ ConnectionStrings:Lab1 %>"
+            runat="server">
+    </asp:SqlDataSource>
 
 </asp:Content>
 
