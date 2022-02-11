@@ -28,5 +28,10 @@ namespace Lab1
         {
 
         }
+
+        protected void ClearButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
