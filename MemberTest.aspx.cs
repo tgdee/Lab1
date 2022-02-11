@@ -27,6 +27,7 @@ namespace Lab1
 
                 using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
                 {
+                    //Creat the string, cmd, and open database connection
                     try
                     {
                         string qString = "SELECT * FROM Member";
@@ -34,6 +35,7 @@ namespace Lab1
                         dbConnection.Open();
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
+                            //Read each column in the SQL Databse 
                             while (reader.Read())
                             {
                                 int MemberID = Int32.Parse(reader["MemberID"].ToString());
@@ -51,6 +53,7 @@ namespace Lab1
                     {
                         lblError.Text = ex.Message;
                     }
+                    //Close Database Connection
                     finally
                     {
                         dbConnection.Close();
@@ -64,6 +67,7 @@ namespace Lab1
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
+            //if there is no information in the text box poukate data & error catch
             if (txtEmail.Text.Equals("") && txtFirstName.Text.Equals("") && txtLastName.Text.Equals(""))
             {
                 txtFirstName.Text = "John";
@@ -80,6 +84,7 @@ namespace Lab1
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
+            //Create the variables going to be saved
             string firstName = txtFirstName.Text.ToString();
             string lastName = txtLastName.Text.ToString();
             string email = txtEmail.Text.ToString();
@@ -87,16 +92,18 @@ namespace Lab1
             Member[] mArray = (Member[])Session["MemberArray"];
             int keeper = (int)Session["MArrayKeeper"];
 
+            //Create the new member obejct using variables
             mArray[keeper++] = new Member(firstName, lastName, email);
 
             Session["ArrayKeeper"] = keeper;
             Session["MemberArray"] = mArray;
 
+            //loop through the list box and add any objects to the member array
             for (int i = 0; i < keeper; i++)
             {
                 lbMember.Items.Add(mArray[i].ToString());
             }
-
+            //Clear the text boxes 
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtEmail.Text = "";
@@ -154,6 +161,7 @@ namespace Lab1
         }
 
         protected void ClearButton_Click(object sender, EventArgs e)
+            //Clear Button for all form boxes excluding listbox
         {
             txtEmail.Text = "";
             txtFirstName.Text = "";
