@@ -113,6 +113,14 @@ namespace Lab1
             txtGradYear.Text = "";
             txtEmail.Text = "";
 
+            reqFieldValidatorFirstName.Enabled = false;
+            RequiredFieldValidatorEmail.Enabled = false;
+            RequiredFieldValidatorGrade.Enabled = false;
+            RequiredFieldValidatorGradYear.Enabled = false;
+            RequiredFieldValidatorPhoneNumber.Enabled = false;
+            RequiredFieldValidatorMajor.Enabled = false;
+            RequiredFieldValidatorLastName.Enabled = false;
+
         }
 
 
