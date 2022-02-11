@@ -140,7 +140,7 @@ namespace Lab1
                         string phoneNumber = sArray[i].PhoneNumber.ToString();
 
                         string insertString = "INSERT INTO Student (StudentID, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber)" +
-                            " VALUES (@param1, @param2, @param3, @param4, @param4, @param5, @param6, @param7, @param8)";
+                            " VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7, @param8)";
 
                         dbConnection.Open();
                         using(SqlCommand cmd = new SqlCommand(insertString, dbConnection))
