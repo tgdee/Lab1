@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Configuration;
+
 namespace Lab1
 {
     public partial class MentoringProgram : System.Web.UI.Page
@@ -12,7 +16,48 @@ namespace Lab1
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+            if (!Page.IsPostBack)
+            {
+
+            }
+
         }
+
+        protected void SetStudentLabel(int index)
+        {
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                try
+                {
+                    string qString = "SELECT FirstName, LastName FROM Student WHERE StudentID=" + index.ToString();
+                    SqlCommand cmd = new SqlCommand(qString, dbConnection);
+                    dbConnection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            StudentName.Text = reader["FirstName"].ToString() + " " + reader["LastName"].ToString();
+                            dbConnection.Close();
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    dbConnection.Close();
+                    lblError.Text = ex.Message;
+                }
+
+            }
+        }
+
+
+
+
+
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
@@ -31,6 +76,18 @@ namespace Lab1
 
         protected void ClearButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        protected void MentorDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        protected void StudentDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetStudentLabel(Int32.Parse(StudentDropDownList.SelectedValue));
 
         }
     }

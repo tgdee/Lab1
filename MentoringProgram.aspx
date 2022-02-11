@@ -14,7 +14,10 @@
                     <asp:Label ID="lblFirstName" runat="server" Text="Please Choose Mentor:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" DataSourceID="MentoringProgramSource" DataTextField="LastName" Height="30px" Width="200px" runat="server"></asp:DropDownList>
+                    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                    <asp:DropDownList ID="MentorDropDownList" DataSourceID="MentoringProgramSource" OnSelectedIndexChanged="MentorDropDownList_SelectedIndexChanged" DataTextField="LastName" Height="30px" Width="200px" runat="server">
+                        <asp:Label ID="MemberName" runat="server" Text="Label"></asp:Label>
+                    </asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -22,7 +25,8 @@
                     <asp:Label ID="Label2" runat="server" Text="Please Choose Student:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" DataSourceID="StudentTableDataSource" DataTextField="LastName" Height="30px" Width="200px" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="StudentDropDownList" DataSourceID="StudentTableDataSource" OnSelectedIndexChanged="StudentDropDownList_SelectedIndexChanged" DataTextField="StudentID" Height="30px" Width="200px" runat="server"></asp:DropDownList>
+                    <asp:Label ID="StudentName" runat="server" Text="Label"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
          </asp:Table>
@@ -40,12 +44,12 @@
     </div>
     <asp:SqlDataSource 
             ID="MentoringProgramSource" 
-            SelectCommand="SELECT LastName FROM DBO.Member"
+            SelectCommand="SELECT Member.MemberID FROM DBO.Member LEFT JOIN Mentorship ON Member.MemberID = Mentorship.MemberID WHERE Mentorship.MemberID IS NULL"
             ConnectionString="<%$ ConnectionStrings:Lab1 %>"
             runat="server"></asp:SqlDataSource>
     <asp:SqlDataSource 
             ID="StudentTableDataSource" 
-            SelectCommand="SELECT LastName FROM DBO.Student"
+            SelectCommand="SELECT Student.StudentID FROM DBO.Student LEFT JOIN Mentorship ON Student.StudentID = Mentorship.StudentID WHERE Mentorship.MemberID IS NULL"
             ConnectionString="<%$ ConnectionStrings:Lab1 %>"
             runat="server"></asp:SqlDataSource>
 </asp:Content>

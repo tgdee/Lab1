@@ -42,13 +42,31 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblFirstName;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// MentorDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList MentorDropDownList;
+
+        /// <summary>
+        /// MemberName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MemberName;
 
         /// <summary>
         /// Label2 control.
@@ -60,13 +78,22 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// StudentDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList StudentDropDownList;
+
+        /// <summary>
+        /// StudentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StudentName;
 
         /// <summary>
         /// PopulateButton control.
