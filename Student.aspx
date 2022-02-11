@@ -80,6 +80,7 @@
             <br />
             <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" OnClick="CommitButton_Click" />
             <asp:Button ID="ClearButton" runat="server" Text="Clear ->" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" OnClick="ClearButton_Click" />
+            <asp:Button ID="ClearListBoxButton" runat="server" Text="Clear List ->" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" OnClick="ClearListBoxButton_Click" />
             <br />
             <br />
         </div>

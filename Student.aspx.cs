@@ -98,6 +98,8 @@ namespace Lab1
             Session["ArrayKeeper"] = keeper;
             Session["StudentArray"] = sArray;
 
+            lstStudentList.Items.Clear();
+
 
             for (int i = 0; i < keeper; i++)
             {
@@ -216,6 +218,11 @@ namespace Lab1
             txtPhoneNumber.Text = "";
             txtGradYear.Text = "";
             txtEmail.Text = "";
+
+        }
+
+        protected void ClearListBoxButton_Click(object sender, EventArgs e)
+        {
             lstStudentList.Items.Clear();
 
         }
