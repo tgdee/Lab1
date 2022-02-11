@@ -15,8 +15,8 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="MemberName" runat="server" Text="Label"></asp:Label>
                     <asp:DropDownList ID="MentorDropDownList" DataSourceID="MentoringProgramSource" OnSelectedIndexChanged="MentorDropDownList_SelectedIndexChanged" DataTextField="LastName" Height="30px" Width="200px" runat="server">
-                        <asp:Label ID="MemberName" runat="server" Text="Label"></asp:Label>
                     </asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
@@ -25,8 +25,8 @@
                     <asp:Label ID="Label2" runat="server" Text="Please Choose Student:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="StudentDropDownList" DataSourceID="StudentTableDataSource" OnSelectedIndexChanged="StudentDropDownList_SelectedIndexChanged" DataTextField="StudentID" Height="30px" Width="200px" runat="server"></asp:DropDownList>
                     <asp:Label ID="StudentName" runat="server" Text="Label"></asp:Label>
+                    <asp:DropDownList ID="StudentDropDownList" DataSourceID="StudentTableDataSource" OnSelectedIndexChanged="StudentDropDownList_SelectedIndexChanged" DataTextField="StudentID" Height="30px" Width="200px" runat="server"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
          </asp:Table>

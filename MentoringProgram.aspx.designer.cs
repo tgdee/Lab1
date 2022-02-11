@@ -51,15 +51,6 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// MentorDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList MentorDropDownList;
-
-        /// <summary>
         /// MemberName control.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label MemberName;
+
+        /// <summary>
+        /// MentorDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList MentorDropDownList;
 
         /// <summary>
         /// Label2 control.
@@ -78,15 +78,6 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// StudentDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList StudentDropDownList;
-
-        /// <summary>
         /// StudentName control.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,15 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label StudentName;
+
+        /// <summary>
+        /// StudentDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList StudentDropDownList;
 
         /// <summary>
         /// PopulateButton control.
