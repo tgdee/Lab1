@@ -25,34 +25,7 @@ namespace Lab1
                 Session["StudentArray"] = new Student[10];
                 Session["ArrayKeeper"] = 0;
 
-                var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-                int keeper = (int)Session["ArrayKeeper"];
-                Student[] sArray = (Student[])Session["StudentArray"];
-                using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
-                {
-                    string qString = "SELECT * FROM Student";
-                    SqlCommand cmd = new SqlCommand(qString, dbConnection);
-                    dbConnection.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-
-                            int StudentId = Int32.Parse(reader["StudentID"].ToString());
-                            string FirstName = reader["FirstName"].ToString();
-                            string LastName = reader["LastName"].ToString();
-                            string GraduationYear = reader["GraduationYear"].ToString();
-                            string Email = reader["Email"].ToString();
-                            string Major = reader["Major"].ToString();
-                            int EmployerId = Int32.Parse(reader["EmployerID"].ToString());
-                            int InternshipNumber = Int32.Parse(reader["InternshipNumber"].ToString());
-                            string Grade = reader["Grade"].ToString();
-                            sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, EmployerId, InternshipNumber, Major);
-                            Session["ArrayKeeper"] = keeper;
-                            Session["StudentArray"] = sArray;
-                        }
-                    }
-                }
+                
 
 
             }
@@ -62,16 +35,21 @@ namespace Lab1
         {
             Student[] sArray = (Student[])Session["StudentArray"];
             int keeper = (int)Session["ArrayKeeper"];
-            string fName = txtStudFirstN.Text.ToString();
-            string lName = txtStudLastN.Text.ToString();
-            string major = txtMajor.Text.ToString();
-            string grade = txtGrade.Text.ToString();
-            string phoneNumber = txtPhoneNumber.Text.ToString();
-            string gradYear = txtGradYear.Text.ToString();
-            string email = txtEmail.Text.ToString();
-            string graduationYear = txtGradYear.Text.ToString();
+            string FirstName = txtStudFirstN.Text.ToString();
+            string LastName = txtStudLastN.Text.ToString();
+            string Major = txtMajor.Text.ToString();
+            string Grade = txtGrade.Text.ToString();
+            string PhoneNumber = txtPhoneNumber.Text.ToString();
+            string GraduationYear = txtGradYear.Text.ToString();
+            string Email = txtEmail.Text.ToString();
+
 
             sArray[keeper++] = new Student();
+
+            for (int i = 0; i < keeper; i++)
+            {
+                lstStudentList.Items.Add(sArray[i].ToString());
+            }
 
 
         }
@@ -81,14 +59,37 @@ namespace Lab1
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
-
-            Student[] sArray = (Student[])Session["StudentArray"];
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
             int keeper = (int)Session["ArrayKeeper"];
-            for(int i = 0; i < keeper; i++)
+            Student[] sArray = (Student[])Session["StudentArray"];
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
             {
-                lstStudentList.Items.Add(sArray[i].ToString());
+                string qString = "SELECT * FROM Student";
+                SqlCommand cmd = new SqlCommand(qString, dbConnection);
+                dbConnection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+
+                        int StudentId = Int32.Parse(reader["StudentID"].ToString());
+                        string FirstName = reader["FirstName"].ToString();
+                        string LastName = reader["LastName"].ToString();
+                        string GraduationYear = reader["GraduationYear"].ToString();
+                        string Email = reader["Email"].ToString();
+                        string Major = reader["Major"].ToString();
+                        int EmployerId = Int32.Parse(reader["EmployerID"].ToString());
+                        int InternshipNumber = Int32.Parse(reader["InternshipNumber"].ToString());
+                        string Grade = reader["Grade"].ToString();
+                        sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, EmployerId, InternshipNumber, Major);
+                        Session["ArrayKeeper"] = keeper;
+                        Session["StudentArray"] = sArray;
+                    }
+                }
             }
-            
+
+
+
         }
 
 
