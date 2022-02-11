@@ -158,7 +158,7 @@ namespace Lab1
             txtEmail.Text = "";
             txtFirstName.Text = "";
             txtLastName.Text = "";
-            lbMember.Items.Clear();
+            
 
         }
     }
