@@ -9,28 +9,26 @@ namespace Lab1
     {
         private string firstName;
         private string lastName;
+        private string email;
 
 
 
+        public String FirstName { get; private set; }
+        public String LastName { get; private set; }
+        public String Email { get; private set; }
 
-        public int memberID { get; private set; }
-        public String fName { get; private set; }
-        public String lName { get; private set; }
-        public String email { get; private set; }
-
-    public Member(int memberID, String fName, String lName, String email)
+    public Member(string fName, string lName, string email)
         {
-            this.memberID = memberID;
-            this.fName = fName;
-            this.lName = lName;
-            this.email = email;
+            FirstName = fName;
+            LastName = lName;
+            Email = email;
 
         }
 
         public override string ToString()
         {
             String description = "";
-            description += this.fName + "\t" + this.lName + "\t" + this.email;
+            description += FirstName + "\t" + LastName + "\t" + Email;
 
             return description;
         }
