@@ -13,5 +13,20 @@ namespace Lab1
         {
 
         }
+
+        protected void PopulateButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CommitButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
