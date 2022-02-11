@@ -116,7 +116,9 @@ namespace Lab1
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
-            if (txtStudFirstN.Text.Equals(""))
+            lblError.Text = "";
+            if (txtStudFirstN.Text.Equals("")&&txtEmail.Text.Equals("")&&txtGrade.Text.Equals("")&&txtGradYear.Text.Equals("")&&txtPhoneNumber.Text.Equals("")
+                &&txtMajor.Text.Equals("")&&txtStudLastN.Text.Equals(""))
             {
                 txtStudFirstN.Text = "Facey";
                 txtStudLastN.Text = "McFaceFace";
@@ -125,6 +127,10 @@ namespace Lab1
                 txtPhoneNumber.Text = "00000000";
                 txtGradYear.Text = "1900";
                 txtEmail.Text = "email@email.com";
+            }
+            else
+            {
+                lblError.Text = "Please Clear Data Before Populating";
             }
         }
 
@@ -152,20 +158,24 @@ namespace Lab1
                         string phoneNumber = sArray[i].PhoneNumber.ToString();
 
                         string insertString = "INSERT INTO Student (FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber)" +
-                            " VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7, @param8)";
+                            " VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7)";
 
                         dbConnection.Open();
-                        using(SqlCommand cmd = new SqlCommand(insertString, dbConnection))
+                        using (SqlCommand cmd = new SqlCommand(insertString, dbConnection))
                         {
-                            cmd.Parameters.Add("@param2", SqlDbType.NVarChar, 50).Value = firstName;
-                            cmd.Parameters.Add("@param3", SqlDbType.NVarChar, 50).Value = lastName;
-                            cmd.Parameters.Add("@param4", SqlDbType.Int).Value = graduationYear;
-                            cmd.Parameters.Add("@param5", SqlDbType.NChar, 10).Value = grade;
-                            cmd.Parameters.Add("@param6", SqlDbType.NVarChar, 50).Value = email;
-                            cmd.Parameters.Add("@param7", SqlDbType.NChar, 10).Value = major;
-                            cmd.Parameters.Add("@param8", SqlDbType.NChar, 10).Value = phoneNumber;
+
+                            cmd.Parameters.Add("@param1", SqlDbType.NVarChar, 50).Value = firstName;
+                            cmd.Parameters.Add("@param2", SqlDbType.NVarChar, 50).Value = lastName;
+                            cmd.Parameters.Add("@param3", SqlDbType.Int).Value = graduationYear;
+                            cmd.Parameters.Add("@param4", SqlDbType.NChar, 10).Value = grade;
+                            cmd.Parameters.Add("@param5", SqlDbType.NVarChar, 50).Value = email;
+                            cmd.Parameters.Add("@param6", SqlDbType.NChar, 10).Value = major;
+                            cmd.Parameters.Add("@param7", SqlDbType.NChar, 10).Value = phoneNumber;
 
                             cmd.ExecuteNonQuery();
+
+                            dbConnection.Close();
+
 
                         }
                     }
@@ -188,8 +198,7 @@ namespace Lab1
 
         protected void ClearButton_Click(object sender, EventArgs e)
         {
-            if (!txtStudFirstN.Text.Equals(""))
-            {
+
                 txtStudFirstN.Text = "";
                 txtStudLastN.Text = "";
                 txtMajor.Text = "";
@@ -197,7 +206,8 @@ namespace Lab1
                 txtPhoneNumber.Text = "";
                 txtGradYear.Text = "";
                 txtEmail.Text = "";
-            }
+            lstStudentList.Items.Clear();
+
         }
     }
 }

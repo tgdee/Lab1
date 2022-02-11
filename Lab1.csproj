@@ -112,7 +112,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Internship.aspx" />
-    <Content Include="Member.aspx" />
+    <Content Include="MemberTest.aspx" />
     <Content Include="MentoringProgram.aspx" />
     <Content Include="MoreInfo.aspx" />
     <Content Include="Student.aspx" />
@@ -178,15 +178,13 @@
     <Compile Include="Internship.aspx.designer.cs">
       <DependentUpon>Internship.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Member.aspx.cs">
-      <DependentUpon>Member.aspx</DependentUpon>
+    <Compile Include="Member.cs" />
+    <Compile Include="MemberTest.aspx.cs">
+      <DependentUpon>MemberTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Member.aspx.designer.cs">
-      <DependentUpon>Member.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member.cs">
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="MemberTest.aspx.designer.cs">
+      <DependentUpon>MemberTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="MentoringProgram.aspx.cs">
       <DependentUpon>MentoringProgram.aspx</DependentUpon>

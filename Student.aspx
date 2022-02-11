@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab1._Default" %>
+﻿<%@ Page Title="Student Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab1._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
@@ -13,7 +13,7 @@
                     <asp:Label ID="lblFirstName" runat="server" Text="First Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtStudFirstN" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtStudFirstN" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -21,7 +21,7 @@
                     <asp:Label ID="lblLastName" runat="server" Text="Last Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtStudLastN" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtStudLastN" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -29,7 +29,7 @@
                     <asp:Label ID="lblMajor" runat="server" Text="Major:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMajor" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -37,7 +37,7 @@
                     <asp:Label ID="lblGrade" runat="server" Text="Grade:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtGrade" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtGrade" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -45,7 +45,7 @@
                     <asp:Label ID="lblGraduationYear" runat="server" Text="Graduation Year:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtGradYear" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtGradYear" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -53,7 +53,7 @@
                     <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>

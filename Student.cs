@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using System.Data;
-using System.Data.SqlClient;
-using System.Web.Configuration;
 
 namespace Lab1
 {
@@ -89,8 +86,8 @@ namespace Lab1
         public override string ToString()
         {
             String description = "";
-            description += this.firstName + "\t" + this.lastName + "\t" +
-                this.graduationYear + "\t" + this.grade + "\t" + this.email + "\t" + Major + "\t" + Email;
+            description += FirstName + "\t" + LastName + "\t" +
+                GraduationYear + "\t" + Grade + "\t" + Email + "\t" + Major + "\t" + Email + "\t" + PhoneNumber;
             return description;
         }
 
