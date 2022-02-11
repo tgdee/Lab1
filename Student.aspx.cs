@@ -104,7 +104,7 @@ namespace Lab1
                     dbConnection.Close();
                     dbConnection.Dispose();
                 }
-                return count + keeper;
+                return count;
 
             }
 
