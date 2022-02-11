@@ -16,7 +16,7 @@
                 <asp:TableCell>
                     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
                     <asp:Label ID="MemberName" runat="server" Text="Label"></asp:Label>
-                    <asp:DropDownList ID="MentorDropDownList" DataSourceID="MentoringProgramSource" OnSelectedIndexChanged="MentorDropDownList_SelectedIndexChanged" DataTextField="LastName" Height="30px" Width="200px" runat="server">
+                    <asp:DropDownList ID="MentorDropDownList" DataSourceID="MentoringProgramSource" OnSelectedIndexChanged="MentorDropDownList_SelectedIndexChanged" DataTextField="MemberID" Height="30px" Width="200px" runat="server">
                     </asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>

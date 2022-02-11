@@ -74,41 +74,44 @@ namespace Lab1
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            if(reqFieldValidatorFirstName.IsValid&&RequiredFieldValidatorLastName.IsValid&&RequiredFieldValidatorMajor.IsValid&&RequiredFieldValidatorGrade.IsValid
-                &&RequiredFieldValidatorGradYear.IsValid&&RequiredFieldValidatorEmail.IsValid&&RequiredFieldValidatorPhoneNumber.IsValid)
+            reqFieldValidatorFirstName.Enabled = true;
+            RequiredFieldValidatorEmail.Enabled = true;
+            RequiredFieldValidatorGrade.Enabled = true;
+            RequiredFieldValidatorGradYear.Enabled = true;
+            RequiredFieldValidatorPhoneNumber.Enabled = true;
+            RequiredFieldValidatorMajor.Enabled = true;
+            RequiredFieldValidatorLastName.Enabled = true;
+
+
+
+            string FirstName = txtStudFirstN.Text.ToString();
+            string LastName = txtStudLastN.Text.ToString();
+            string Major = txtMajor.Text.ToString();
+            string Grade = txtGrade.Text.ToString();
+            string PhoneNumber = txtPhoneNumber.Text.ToString();
+            string GraduationYear = txtGradYear.Text.ToString();
+            string Email = txtEmail.Text.ToString();
+
+            Student[] sArray = (Student[])Session["StudentArray"];
+            int keeper = (int)Session["ArrayKeeper"];
+            sArray[keeper++] = new Student(FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
+            Session["ArrayKeeper"] = keeper;
+            Session["StudentArray"] = sArray;
+
+
+            for (int i = 0; i < keeper; i++)
             {
-                string FirstName = txtStudFirstN.Text.ToString();
-                string LastName = txtStudLastN.Text.ToString();
-                string Major = txtMajor.Text.ToString();
-                string Grade = txtGrade.Text.ToString();
-                string PhoneNumber = txtPhoneNumber.Text.ToString();
-                string GraduationYear = txtGradYear.Text.ToString();
-                string Email = txtEmail.Text.ToString();
 
-                Student[] sArray = (Student[])Session["StudentArray"];
-                int keeper = (int)Session["ArrayKeeper"];
-                sArray[keeper++] = new Student(FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
-                Session["ArrayKeeper"] = keeper;
-                Session["StudentArray"] = sArray;
-
-
-                for (int i = 0; i < keeper; i++)
-                {
-
-                    lstStudentList.Items.Add(sArray[i].ToString());
-                }
-
-                txtStudFirstN.Text = "";
-                txtStudLastN.Text = "";
-                txtMajor.Text = "";
-                txtGrade.Text = "";
-                txtPhoneNumber.Text = "";
-                txtGradYear.Text = "";
-                txtEmail.Text = "";
-
-
-
+                lstStudentList.Items.Add(sArray[i].ToString());
             }
+
+            txtStudFirstN.Text = "";
+            txtStudLastN.Text = "";
+            txtMajor.Text = "";
+            txtGrade.Text = "";
+            txtPhoneNumber.Text = "";
+            txtGradYear.Text = "";
+            txtEmail.Text = "";
 
         }
 
@@ -116,8 +119,8 @@ namespace Lab1
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
             lblError.Text = "";
-            if (txtStudFirstN.Text.Equals("")&&txtEmail.Text.Equals("")&&txtGrade.Text.Equals("")&&txtGradYear.Text.Equals("")&&txtPhoneNumber.Text.Equals("")
-                &&txtMajor.Text.Equals("")&&txtStudLastN.Text.Equals(""))
+            if (txtStudFirstN.Text.Equals("") && txtEmail.Text.Equals("") && txtGrade.Text.Equals("") && txtGradYear.Text.Equals("") && txtPhoneNumber.Text.Equals("")
+                && txtMajor.Text.Equals("") && txtStudLastN.Text.Equals(""))
             {
                 txtStudFirstN.Text = "Facey";
                 txtStudLastN.Text = "McFaceFace";
@@ -190,7 +193,7 @@ namespace Lab1
                     dbConnection.Close();
                     dbConnection.Dispose();
                 }
-                
+
 
             }
         }
@@ -198,13 +201,13 @@ namespace Lab1
         protected void ClearButton_Click(object sender, EventArgs e)
         {
 
-                txtStudFirstN.Text = "";
-                txtStudLastN.Text = "";
-                txtMajor.Text = "";
-                txtGrade.Text = "";
-                txtPhoneNumber.Text = "";
-                txtGradYear.Text = "";
-                txtEmail.Text = "";
+            txtStudFirstN.Text = "";
+            txtStudLastN.Text = "";
+            txtMajor.Text = "";
+            txtGrade.Text = "";
+            txtPhoneNumber.Text = "";
+            txtGradYear.Text = "";
+            txtEmail.Text = "";
             lstStudentList.Items.Clear();
 
         }

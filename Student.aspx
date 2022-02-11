@@ -14,7 +14,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStudFirstN" runat="server" Text=""></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="reqFieldValidatorFirstName" runat="server" ControlToValidate="txtStudFirstN" ErrorMessage="Enter First Name"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="reqFieldValidatorFirstName" runat="server" Enabled="false" ControlToValidate="txtStudFirstN" ErrorMessage="Enter First Name"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -23,7 +23,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStudLastN" runat="server" Text=""></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ControlToValidate="txtStudLastN" ErrorMessage="Enter Last Name"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" Enabled="false" runat="server" ControlToValidate="txtStudLastN" ErrorMessage="Enter Last Name"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -32,7 +32,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtMajor" runat="server" Text=""></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorMajor" runat="server" ControlToValidate="txtMajor" ErrorMessage="Enter Major"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorMajor" runat="server" Enabled="false" ControlToValidate="txtMajor" ErrorMessage="Enter Major"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -41,7 +41,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtGrade" runat="server" Text=""></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGrade" runat="server" ControlToValidate="txtGrade" ErrorMessage="Enter Grade"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGrade" runat="server" ControlToValidate="txtGrade" Enabled="false" ErrorMessage="Enter Grade"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -50,7 +50,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtGradYear" runat="server" Text=""></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGradYear" runat="server" ControlToValidate="txtGradYear" ErrorMessage="Enter Graduation Year"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGradYear" runat="server" ControlToValidate="txtGradYear" Enabled="false" ErrorMessage="Enter Graduation Year"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -59,7 +59,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtEmail" runat="server" Text=""></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Email"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="txtEmail" Enabled="false" ErrorMessage="Enter Email"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -68,7 +68,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Enter Phone Number"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ControlToValidate="txtPhoneNumber" Enabled="false" ErrorMessage="Enter Phone Number"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>

@@ -17,10 +17,12 @@ namespace Lab1
         {
 
 
-            if (!Page.IsPostBack)
+            if (!Page.IsPostBack && MentorDropDownList.DataTextField!=null&&StudentDropDownList!=null)
             {
-                string selectedText = StudentDropDownList.DataTextField;
-                SetStudentLabel(selectedText);
+                string selectedTextStudent = StudentDropDownList.DataTextField;
+                SetStudentLabel(selectedTextStudent);
+                string selectedTextMember = MentorDropDownList.DataTextField;
+                SetMemberLabel(selectedTextMember);
 
             }
 
@@ -60,9 +62,39 @@ namespace Lab1
             }
         }
 
+        protected void SetMemberLabel(string value)
+        {
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
 
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                try
+                {
+                    string qString = "SELECT FirstName, LastName FROM Member WHERE MemberID=" + value;
+                    SqlCommand cmd = new SqlCommand(qString, dbConnection);
+                    dbConnection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            StudentName.Text = reader["FirstName"].ToString() + " " + reader["LastName"].ToString();
 
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    dbConnection.Close();
+                    lblError.Text = ex.Message;
+                }
+                finally
+                {
+                    dbConnection.Close();
+                    dbConnection.Dispose();
+                }
 
+            }
+        }
 
 
         protected void PopulateButton_Click(object sender, EventArgs e)
@@ -87,13 +119,14 @@ namespace Lab1
 
         protected void MentorDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SetMemberLabel(MentorDropDownList.SelectedValue);
 
 
         }
 
         protected void StudentDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetStudentLabel(StudentDropDownList.SelectedItem.ToString());
+            SetStudentLabel(StudentDropDownList.SelectedValue);
 
         }
     }
