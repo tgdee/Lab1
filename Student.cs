@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Configuration;
+
 namespace Lab1
 {
     public class Student
@@ -13,7 +17,6 @@ namespace Lab1
         private string email;
         private string major;
         private string graduationYear;
-        private int studentId;
         private string grade;
         private string phoneNumber;
         
@@ -45,11 +48,7 @@ namespace Lab1
             get { return graduationYear; }
             set { graduationYear = value; } 
         }
-        public int StudentId
-        {
-            get { return studentId; }
-            set { studentId = value; }
-        }
+
         public string Grade
         {
             get { return grade; }
@@ -64,10 +63,9 @@ namespace Lab1
 
 
         // Overloaded Constructor
-        public Student(int studentId, string firstName, string lastName, string graduationYear, 
+        public Student(string firstName, string lastName, string graduationYear, 
             string grade, string email, string major, string phoneNumber)
         {
-            StudentId = studentId;
             FirstName = firstName;
             LastName = lastName;
             GraduationYear = graduationYear;
@@ -79,7 +77,6 @@ namespace Lab1
 
         public Student()
         {
-            StudentId = 0;
             FirstName = "";
             LastName = "";
             GraduationYear = "";

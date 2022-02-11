@@ -35,7 +35,7 @@ namespace Lab1
             String email = txtEmail.Text.ToString();
 
             //Create the array 
-            Member memObject = new Member(1, firstName, lastName, email);
+            Member memObject = new Member(firstName, lastName, email);
 
         }
     }
