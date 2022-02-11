@@ -13,8 +13,8 @@
                     <asp:Label ID="lblFirstName" runat="server" Text="First Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="reqFieldValidatorFirstName" runat="server" ControlToValidate="txtStudFirstN" ErrorMessage="Enter First Name"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtStudFirstN" runat="server" Text=""></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="reqFieldValidatorFirstName" runat="server" ControlToValidate="txtStudFirstN" ErrorMessage="Enter First Name"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -22,8 +22,8 @@
                     <asp:Label ID="lblLastName" runat="server" Text="Last Name:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ControlToValidate="txtStudLastN" ErrorMessage="Enter Last Name"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtStudLastN" runat="server" Text=""></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ControlToValidate="txtStudLastN" ErrorMessage="Enter Last Name"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -31,8 +31,8 @@
                     <asp:Label ID="lblMajor" runat="server" Text="Major:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorMajor" runat="server" ControlToValidate="txtMajor" ErrorMessage="Enter Major"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtMajor" runat="server" Text=""></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorMajor" runat="server" ControlToValidate="txtMajor" ErrorMessage="Enter Major"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -40,8 +40,8 @@
                     <asp:Label ID="lblGrade" runat="server" Text="Grade:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGrade" runat="server" ControlToValidate="txtGrade" ErrorMessage="Enter Grade"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtGrade" runat="server" Text=""></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGrade" runat="server" ControlToValidate="txtGrade" ErrorMessage="Enter Grade"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -49,8 +49,8 @@
                     <asp:Label ID="lblGraduationYear" runat="server" Text="Graduation Year:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGradYear" runat="server" ControlToValidate="txtGradYear" ErrorMessage="Enter Graduation Year"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtGradYear" runat="server" Text=""></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorGradYear" runat="server" ControlToValidate="txtGradYear" ErrorMessage="Enter Graduation Year"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -58,8 +58,8 @@
                     <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Email"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtEmail" runat="server" Text=""></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Enter Email"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -67,8 +67,8 @@
                     <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Enter Phone Number"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ControlToValidate="txtPhoneNumber" ErrorMessage="Enter Phone Number"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
