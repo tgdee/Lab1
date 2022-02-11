@@ -190,6 +190,9 @@
     <Compile Include="Internship.aspx.designer.cs">
       <DependentUpon>Internship.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Internship.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Member.cs" />
     <Compile Include="MemberTest.aspx.cs">
       <DependentUpon>MemberTest.aspx</DependentUpon>

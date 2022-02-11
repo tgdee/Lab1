@@ -51,6 +51,15 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtType;
 
         /// <summary>
+        /// reqFieldValidatorType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFieldValidatorType;
+
+        /// <summary>
         /// lblInternshipStart control.
         /// </summary>
         /// <remarks>
@@ -69,6 +78,15 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.TextBox txtStart;
 
         /// <summary>
+        /// reqFieldValidatorStart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFieldValidatorStart;
+
+        /// <summary>
         /// lblInternshipCity control.
         /// </summary>
         /// <remarks>
@@ -78,13 +96,22 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblInternshipCity;
 
         /// <summary>
-        /// txtMajor control.
+        /// txtCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMajor;
+        protected global::System.Web.UI.WebControls.TextBox txtCity;
+
+        /// <summary>
+        /// reqFieldValidatorCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFieldValidatorCity;
 
         /// <summary>
         /// lblStudentID control.
@@ -157,6 +184,15 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ClearButton;
+
+        /// <summary>
+        /// lstInternList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox lstInternList;
 
         /// <summary>
         /// MentoringProgramSource control.

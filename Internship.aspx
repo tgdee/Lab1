@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Internship.aspx.cs" Inherits="Lab1.Internship" MasterPageFile="~/Site.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <br/>
+   
   
     <div>
         <asp:Table ID="Table1" runat="server">
@@ -15,6 +15,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtType" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="reqFieldValidatorType" runat="server" Enabled="false" ControlToValidate="txtType" ErrorMessage="Enter Internship Type"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -23,6 +24,7 @@
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtStart" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="reqFieldValidatorStart" runat="server" Enabled="false" ControlToValidate="txtStart" ErrorMessage="Enter Start Date"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -30,7 +32,8 @@
                     <asp:Label ID="lblInternshipCity" runat="server" Text="InternshipCity:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="reqFieldValidatorCity" runat="server" Enabled="false" ControlToValidate="txtCity" ErrorMessage="Enter Internship City"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -63,6 +66,9 @@
             <br />
         </div>
     </div>
+
+    <asp:ListBox ID="lstInternList" runat="server" Style="min-width: 600px" size="1"></asp:ListBox>
+
     <asp:SqlDataSource 
             ID="MentoringProgramSource" 
             SelectCommand="SELECT LastName FROM DBO.Member"
