@@ -4,35 +4,61 @@
   
     <div>
         <asp:Table ID="Table1" runat="server">
-        <asp:TableHeaderRow>
+       <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Center">
-                    <asp:Label ID="lblHeaderMessage" runat="server" Text="Mentoring Program Information:" Font-Underline="true" Font-Size="Larger"></asp:Label>
+                    <asp:Label ID="lblHeaderMessage" runat="server" Text="Internship Information" Font-Underline="true" Font-Size="Larger"></asp:Label>
                 </asp:TableHeaderCell>
             </asp:TableHeaderRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblFirstName" runat="server" Text="Please Choose Mentor:"></asp:Label>
+                    <asp:Label ID="lblInternshipType" runat="server" Text="internship Type:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" DataSourceID="MentoringProgramSource" DataTextField="LastName" Height="30px" Width="200px" runat="server"></asp:DropDownList>
+                    <asp:TextBox ID="txtType" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="Label2" runat="server" Text="Please Choose Student:"></asp:Label>
+                    <asp:Label ID="lblInternshipStart" runat="server" Text="Internship Start Date:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" DataSourceID="StudentTableDataSource" DataTextField="LastName" Height="30px" Width="200px" runat="server"></asp:DropDownList>
+                    <asp:TextBox ID="txtStart" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="lblInternshipCity" runat="server" Text="InternshipCity:"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="txtMajor" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="lblStudentID" runat="server" Text="Student ID:"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="lblMemberID" runat="server" Text="Member ID:"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                </asp:TableCell>
+            </asp:TableRow>
+           
          </asp:Table>
          <div style="-webkit-box-align: center">
             <br />
-            <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->"   />
-            <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save ->"  />
+            <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->" OnClick="PopulateButton_Click"/>
+            <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save ->" OnClick="SaveButton_Click"/>
             <br />
             <br />
-            <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" />
+            <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" OnClick="CommitButton_Click" />
+            <asp:Button ID="ClearButton" runat="server" Text="Clear - >" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" OnClick="ClearButton_Click"/>
             <br />
             <br />
         </div>
