@@ -25,6 +25,49 @@ namespace Lab1
                 Session["StudentArray"] = new Student[10];
                 Session["ArrayKeeper"] = 0;
 
+                var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+                int keeper = (int)Session["ArrayKeeper"];
+                Student[] sArray = (Student[])Session["StudentArray"];
+                using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+                {
+                    try
+                    {
+                        string qString = "SELECT * FROM Student";
+                        SqlCommand cmd = new SqlCommand(qString, dbConnection);
+                        dbConnection.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+
+                                int StudentId = Int32.Parse(reader["StudentID"].ToString());
+                                string FirstName = reader["FirstName"].ToString();
+                                string LastName = reader["LastName"].ToString();
+                                string GraduationYear = reader["GraduationYear"].ToString();
+                                string Email = reader["Email"].ToString();
+                                string Major = reader["Major"].ToString();
+                                string PhoneNumber = reader["PhoneNumber"].ToString();
+                                string Grade = reader["Grade"].ToString();
+                                sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
+                                Session["ArrayKeeper"] = keeper;
+                                Session["StudentArray"] = sArray;
+                            }
+                        }
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        lblError.Text = ex.Message;
+
+                    }
+                    finally
+                    {
+                        dbConnection.Close();
+                        dbConnection.Dispose();
+                    }
+
+                }
+
             }
         }
 
@@ -108,49 +151,16 @@ namespace Lab1
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
-            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-            int keeper = (int)Session["ArrayKeeper"];
-            Student[] sArray = (Student[])Session["StudentArray"];
-            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            if (txtStudFirstN.Text.Equals(""))
             {
-                try
-                {
-                    string qString = "SELECT * FROM Student";
-                    SqlCommand cmd = new SqlCommand(qString, dbConnection);
-                    dbConnection.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-
-                            int StudentId = Int32.Parse(reader["StudentID"].ToString());
-                            string FirstName = reader["FirstName"].ToString();
-                            string LastName = reader["LastName"].ToString();
-                            string GraduationYear = reader["GraduationYear"].ToString();
-                            string Email = reader["Email"].ToString();
-                            string Major = reader["Major"].ToString();
-                            string PhoneNumber = reader["PhoneNumber"].ToString();
-                            string Grade = reader["Grade"].ToString();
-                            sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
-                            Session["ArrayKeeper"] = keeper;
-                            Session["StudentArray"] = sArray;
-                        }
-                    }
-
-                }
-                catch (SqlException ex)
-                {
-                    lblError.Text = ex.Message;
-
-                }
-                finally
-                {
-                    dbConnection.Close();
-                    dbConnection.Dispose();
-                }
-                
+                txtStudFirstN.Text = "Facey";
+                txtStudLastN.Text = "McFaceFace";
+                txtMajor.Text = "HorseBreeding";
+                txtGrade.Text = "Freshman";
+                txtPhoneNumber.Text = "00000000";
+                txtGradYear.Text = "1900";
+                txtEmail.Text = "email@email.com";
             }
-
         }
 
 
