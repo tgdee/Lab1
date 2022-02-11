@@ -41,18 +41,17 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    
-                    <a class="navbar-brand" runat="server" href="~/">Student</a>
-                    <a class="navbar-brand" runat="server" href="~/">Member</a>
-                    <a class="navbar-brand" runat="server" href="~/">Company</a>
-                    <a class="navbar-brand" runat="server" href="~/">Internship</a>
-                    <a class="navbar-brand" runat="server" href="~/">Scholarship</a>
-                    <a class="navbar-brand" runat="server" href="~/">Mentoring Program</a>
+                    <a class="navbar-brand" runat="server" href="~/Student.aspx">Student</a>
+                    <a class="navbar-brand" runat="server" href="~/Member.aspx">Member</a>
+                    <a class="navbar-brand" runat="server" href="~/Company.aspx">Company</a>
+                    <a class="navbar-brand" runat="server" href="~/Internship.aspx">Internship</a>
+                    <a class="navbar-brand" runat="server" href="~/Scholarship.aspx">Scholarship</a>
+                    <a class="navbar-brand" runat="server" href="~/MentoringProgram.aspx">Mentoring Program</a>
                 </div>
             </div>
         </div>
