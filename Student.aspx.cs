@@ -73,6 +73,7 @@ namespace Lab1
 
         protected int NumberOfRows()
         {
+            int keeper = (int)Session["ArrayKeeper"];
             var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
             using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
             {
@@ -103,7 +104,7 @@ namespace Lab1
                     dbConnection.Close();
                     dbConnection.Dispose();
                 }
-                return count;
+                return count + keeper;
 
             }
 
