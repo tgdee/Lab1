@@ -70,6 +70,7 @@
         <br />
         <asp:Button ID="PopulateButton" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
         <br />
+        <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label>
         <asp:ListBox ID="lstStudentList" runat="server" Width="1000"></asp:ListBox>
         <br />
         <br />
