@@ -46,6 +46,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand" runat="server" href="~/Homepage.aspx">HomePage</a>
                     <a class="navbar-brand" runat="server" href="~/Student.aspx">Student</a>
                     <a class="navbar-brand" runat="server" href="~/MemberTest.aspx">Member</a>
                     <a class="navbar-brand" runat="server" href="~/Company.aspx">Company</a>
