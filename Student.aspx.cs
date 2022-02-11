@@ -25,9 +25,6 @@ namespace Lab1
                 Session["StudentArray"] = new Student[10];
                 Session["ArrayKeeper"] = 0;
 
-                
-
-
             }
         }
 
@@ -43,19 +40,16 @@ namespace Lab1
             string GraduationYear = txtGradYear.Text.ToString();
             string Email = txtEmail.Text.ToString();
 
-
-            sArray[keeper++] = new Student();
+            int arrayCount = sArray.Length;
 
             for (int i = 0; i < keeper; i++)
             {
+                sArray[keeper++] = new Student(arrayCount++, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
                 lstStudentList.Items.Add(sArray[i].ToString());
             }
 
-
         }
 
-
-        
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
@@ -80,8 +74,9 @@ namespace Lab1
                         string Major = reader["Major"].ToString();
                         int EmployerId = Int32.Parse(reader["EmployerID"].ToString());
                         int InternshipNumber = Int32.Parse(reader["InternshipNumber"].ToString());
+                        string PhoneNumber = reader["PhoneNumber"].ToString();
                         string Grade = reader["Grade"].ToString();
-                        sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, EmployerId, InternshipNumber, Major);
+                        sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
                         Session["ArrayKeeper"] = keeper;
                         Session["StudentArray"] = sArray;
                     }

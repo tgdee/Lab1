@@ -12,11 +12,10 @@ namespace Lab1
         private string lastName;
         private string email;
         private string major;
-        private int employerId;
-        private int internshipNumber;
         private string graduationYear;
         private int studentId;
         private string grade;
+        private string phoneNumber;
         
         // Property Declarations
         public string FirstName 
@@ -40,16 +39,7 @@ namespace Lab1
             get { return major; }
             set { major = value; } 
         }
-        public int EmployerId
-        {
-            get { return employerId; }
-            set { employerId = value; } 
-        }
-        public int InternshipNumber
-        {
-            get { return internshipNumber; }
-            set { internshipNumber = value; } 
-        }
+
         public string GraduationYear 
         {
             get { return graduationYear; }
@@ -66,10 +56,16 @@ namespace Lab1
             set { grade = value; }
         }
 
+        public string PhoneNumber
+        {
+            get { return phoneNumber; }
+            set { phoneNumber = value; }
+        }
+
 
         // Overloaded Constructor
         public Student(int studentId, string firstName, string lastName, string graduationYear, 
-            string grade, string email, int employerId, int internshipNumber, string major)
+            string grade, string email, string major, string phoneNumber)
         {
             StudentId = studentId;
             FirstName = firstName;
@@ -77,9 +73,8 @@ namespace Lab1
             GraduationYear = graduationYear;
             Grade = grade;
             Email = email;
-            EmployerId = employerId;
-            InternshipNumber = internshipNumber;
             Major = major;
+            PhoneNumber = phoneNumber;
         }
 
         public Student()
@@ -90,8 +85,6 @@ namespace Lab1
             GraduationYear = "";
             Grade = "";
             Email = "";
-            EmployerId = 0;
-            InternshipNumber = 0;
             Major = "";
 
         }
@@ -100,8 +93,7 @@ namespace Lab1
         {
             String description = "";
             description += this.firstName + "\t" + this.lastName + "\t" +
-                this.graduationYear + "\t" + this.grade + "\t" + this.email + "\t" + this.employerId
-                + "\t" + this.internshipNumber;
+                this.graduationYear + "\t" + this.grade + "\t" + this.email + "\t";
             return description;
         }
 
