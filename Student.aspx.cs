@@ -71,10 +71,11 @@ namespace Lab1
             string email = txtEmail.Text.ToString();
             string graduationYear = txtGradYear.Text.ToString();
 
-            sArray[keeper++] = new Student()
+            sArray[keeper++] = new Student();
 
 
         }
+
 
         
 
@@ -88,145 +89,6 @@ namespace Lab1
                 lstStudentList.Items.Add(sArray[i].ToString());
             }
             
-        }
-
-
-
-        protected void BindDataToGridView()
-        {
-            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-
-            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
-            {
-                try
-                {
-                    dbConnection.Open();
-                    SqlCommand command = new SqlCommand("SELECT StudentID, FirstName, LastName FROM Student ORDER BY StudentID", dbConnection);
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                    DataSet dataSet = new DataSet();
-                    dataAdapter.Fill(dataSet);
-                    if (dataSet.Tables[0].Rows.Count > 0)
-                    {
-                        gvStudent.DataSource = dataSet;
-                        gvStudent.DataBind();
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    ltError.Text = "Error: " + ex.Message;
-                }
-                finally
-                {
-                    dbConnection.Close();
-                    dbConnection.Dispose();
-                }
-
-            }
-
-
-        }
-
-        protected void gvStudent_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            ltError.Text = string.Empty;    // Set error text to empty in case there was error already there 
-            gvStudent.EditIndex = e.NewEditIndex; // The new edit index is what is passed into e parameter
-            BindDataToGridView();
-        }
-
-        protected void gvStudent_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            ltError.Text = string.Empty;
-            GridViewRow gvRow = (GridViewRow)gvStudent.Rows[e.RowIndex];
-            HiddenField hdnStudentId = (HiddenField)gvRow.FindControl("hdnStudentId");
-            TextBox TxtFirstName = (TextBox)gvRow.Cells[1].Controls[0];
-            TextBox TxtLastName = (TextBox)gvRow.Cells[2].Controls[0];
-
-            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-
-            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
-            {
-                try
-                {
-                    dbConnection.Open();
-                    string sql = string.Format("UPDATE Student SET FirstName='{0}', LastName='{1}' WHERE StudentId={2}", TxtFirstName.Text, TxtLastName.Text, hdnStudentId.Value);
-                    SqlCommand command = new SqlCommand(sql, dbConnection);
-                    command.ExecuteNonQuery();
-                    gvStudent.EditIndex = -1;   // By setting editing index to -1 means we are no longer editing
-                    BindDataToGridView();
-                }
-                catch (Exception ex)
-                {
-                    ltError.Text = ex.Message;
-                }
-                finally
-                {
-                    dbConnection.Close();
-                    dbConnection.Dispose();
-                }
-
-            }
-        }
-
-        protected void gvStudent_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
-
-            gvStudent.EditIndex = -1;
-            BindDataToGridView();
-        }
-        protected void gvStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            ltError.Text = string.Empty;
-            GridViewRow gvRow = (GridViewRow)gvStudent.Rows[e.RowIndex];
-            HiddenField hdnStudentId = (HiddenField)gvRow.FindControl("hdnStudentId");
-
-            var connetionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-
-            using (SqlConnection dbConnection = new SqlConnection(connetionFromConfiguration.ConnectionString))
-            {
-                try
-                {
-                    dbConnection.Open();
-                    string sql = string.Format("DELETE FROM Student WHERE StudentID={0}", hdnStudentId.Value);
-                    SqlCommand command = new SqlCommand(sql, dbConnection);
-                    command.ExecuteNonQuery();
-                    gvStudent.EditIndex = -1;
-                    BindDataToGridView();
-                }
-                catch (Exception ex)
-                {
-                    ltError.Text = ex.Message;
-                }
-                finally
-                {
-                    dbConnection.Close();
-                    dbConnection.Dispose();
-                }
-            }
-        }
-
-        protected void btnAddRow_Click(object sender, EventArgs e)
-        {
-            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-
-            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
-            {
-                try
-                {
-                    dbConnection.Open();
-                    SqlCommand command = new SqlCommand("INSERT INTO Student (FirstName, LastName) VALUES ('', '')", dbConnection);
-                    command.ExecuteNonQuery();
-                    BindDataToGridView();
-                }
-                catch (Exception ex)
-                {
-                    ltError.Text = ex.Message;
-                }
-                finally
-                {
-                    dbConnection.Close();
-                    dbConnection.Dispose();
-                }
-            }
         }
 
 
