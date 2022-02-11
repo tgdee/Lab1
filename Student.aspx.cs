@@ -224,5 +224,18 @@ namespace Lab1
             }
         }
 
+        protected void ClearButton_Click(object sender, EventArgs e)
+        {
+            if (!txtStudFirstN.Text.Equals(""))
+            {
+                txtStudFirstN.Text = "";
+                txtStudLastN.Text = "";
+                txtMajor.Text = "";
+                txtGrade.Text = "";
+                txtPhoneNumber.Text = "";
+                txtGradYear.Text = "";
+                txtEmail.Text = "";
+            }
+        }
     }
 }

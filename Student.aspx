@@ -72,6 +72,7 @@
             <br />
             <br />
             <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" OnClick="CommitButton_Click" />
+            <asp:Button ID="ClearButton" runat="server" Text="Clear ->" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" OnClick="ClearButton_Click" />
             <br />
             <br />
         </div>
