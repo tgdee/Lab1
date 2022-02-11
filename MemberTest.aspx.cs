@@ -18,7 +18,7 @@ namespace Lab1
             if (!IsPostBack)
             {
                 //As the page loads we want to create an array of members
-                Session["MemberArray"] = new Member[20];
+                Session["MemberArray"] = new Member[10];
                 Session["MArrayKeeper"] = 0;
 
                 var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
