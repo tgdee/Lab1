@@ -92,8 +92,6 @@ namespace Lab1
             Session["ArrayKeeper"] = keeper;
             Session["MemberArray"] = mArray;
 
-            lbMember.Items.Clear();
-
             for (int i = 0; i < keeper; i++)
             {
                 lbMember.Items.Add(mArray[i].ToString());
@@ -102,6 +100,7 @@ namespace Lab1
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtEmail.Text = "";
+
 
         }
 

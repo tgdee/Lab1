@@ -92,10 +92,6 @@ namespace Lab1
                 Session["StudentArray"] = sArray;
 
 
-
-                lstStudentList.Items.Clear();
-
-
                 for (int i = 0; i < keeper; i++)
                 {
 
@@ -109,6 +105,8 @@ namespace Lab1
                 txtPhoneNumber.Text = "";
                 txtGradYear.Text = "";
                 txtEmail.Text = "";
+
+
 
             }
 

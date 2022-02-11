@@ -19,12 +19,14 @@ namespace Lab1
 
             if (!Page.IsPostBack)
             {
+                string selectedText = StudentDropDownList.DataTextField;
+                SetStudentLabel(selectedText);
 
             }
 
         }
 
-        protected void SetStudentLabel(int index)
+        protected void SetStudentLabel(string value)
         {
             var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
 
@@ -32,7 +34,7 @@ namespace Lab1
             {
                 try
                 {
-                    string qString = "SELECT FirstName, LastName FROM Student WHERE StudentID=" + index.ToString();
+                    string qString = "SELECT FirstName, LastName FROM Student WHERE StudentID=" + value;
                     SqlCommand cmd = new SqlCommand(qString, dbConnection);
                     dbConnection.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -40,7 +42,6 @@ namespace Lab1
                         while (reader.Read())
                         {
                             StudentName.Text = reader["FirstName"].ToString() + " " + reader["LastName"].ToString();
-                            dbConnection.Close();
 
                         }
                     }
@@ -49,6 +50,11 @@ namespace Lab1
                 {
                     dbConnection.Close();
                     lblError.Text = ex.Message;
+                }
+                finally
+                {
+                    dbConnection.Close();
+                    dbConnection.Dispose();
                 }
 
             }
@@ -87,7 +93,7 @@ namespace Lab1
 
         protected void StudentDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetStudentLabel(Int32.Parse(StudentDropDownList.SelectedValue));
+            SetStudentLabel(StudentDropDownList.SelectedItem.ToString());
 
         }
     }
