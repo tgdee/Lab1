@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab1._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-
-   <%-- <div class="jumbotron">
+    <div class="jumbotron">
         <asp:Table runat="server" Height="187px" Width="365px">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Center">
@@ -68,17 +66,17 @@
             </asp:TableRow>
         </asp:Table>
         <asp:Table runat="server" Width="1000">
-            <asp:ListView ID="ListView1" runat="server"></asp:ListView>
         </asp:Table>
-            <br />
-            <asp:Button ID="PopulateButton" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
-            <br />
-            <asp:ListBox ID="lstStudentList" runat="server" Width="1000"></asp:ListBox>
-            <br />
-            <br />
+        <br />
+        <asp:Button ID="PopulateButton" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
+        <br />
+        <asp:ListBox ID="lstStudentList" runat="server" Width="1000"></asp:ListBox>
+        <br />
+        <br />
         <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
         <br />
         <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
+    </div>
     <div>
         <asp:SqlDataSource 
             ID="srcStudentID" 
@@ -86,7 +84,4 @@
             ConnectionString="<%$ ConnectionStrings:Lab1 %>"
             runat="server"></asp:SqlDataSource>
     </div>
-
-
-
 </asp:Content>

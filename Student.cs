@@ -10,7 +10,6 @@ namespace Lab1
         // Data Field Declarations
         private string firstName;
         private string lastName;
-        private string academicYear;
         private string email;
         private string major;
         private int employerId;
@@ -30,11 +29,7 @@ namespace Lab1
             get { return lastName; }
             set { lastName = value; } 
         }
-        public string AcademicYear
-        {
-            get { return academicYear; }
-            set { academicYear = value; }
-        }
+
         public string Email
         {
             get { return email; }
@@ -87,11 +82,25 @@ namespace Lab1
             Major = major;
         }
 
+        public Student()
+        {
+            StudentId = 0;
+            FirstName = "";
+            LastName = "";
+            GraduationYear = "";
+            Grade = "";
+            Email = "";
+            EmployerId = 0;
+            InternshipNumber = 0;
+            Major = "";
+
+        }
+
         public override string ToString()
         {
             String description = "";
             description += this.firstName + "\t" + this.lastName + "\t" +
-                this.graduationYear + "\t" + this.academicYear + "\t" + this.email + "\t" + this.employerId
+                this.graduationYear + "\t" + this.grade + "\t" + this.email + "\t" + this.employerId
                 + "\t" + this.internshipNumber;
             return description;
         }
