@@ -21,7 +21,6 @@
             <asp:TableCell>
                     <asp:Label ID="lblCmpName" runat="server" Text="Company Name:"></asp:Label>
                 </asp:TableCell>
-
                 <asp:TableCell>
                     <asp:TextBox ID="txtName" runat="server" Text=""></asp:TextBox>
                 </asp:TableCell>
@@ -70,6 +69,8 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
+        <asp:ListBox ID="CompanyListBox" runat="server"></asp:ListBox>
+        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
          <div style="-webkit-box-align: center">
             <br />
             <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->" OnClick="PopulateButton_Click"/>

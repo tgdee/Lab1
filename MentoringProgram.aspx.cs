@@ -17,15 +17,6 @@ namespace Lab1
         {
 
 
-            if (!Page.IsPostBack && MentorDropDownList.DataTextField!=null&&StudentDropDownList!=null)
-            {
-                string selectedTextStudent = StudentDropDownList.DataTextField;
-                SetStudentLabel(selectedTextStudent);
-                string selectedTextMember = MentorDropDownList.DataTextField;
-                SetMemberLabel(selectedTextMember);
-
-            }
-
         }
 
         protected void SetStudentLabel(string value)

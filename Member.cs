@@ -7,15 +7,14 @@ namespace Lab1
 {
     partial class Member
     {
-        private string firstName;
         private string lastName;
         private string email;
 
 
 
-        public String FirstName { get; private set; }
-        public String LastName { get; private set; }
-        public String Email { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; private set; }
+        public string Email { get; private set; }
 
     public Member(string fName, string lName, string email)
         {
@@ -27,7 +26,7 @@ namespace Lab1
 
         public override string ToString()
         {
-            String description = "";
+            string description = "";
             description += FirstName + "\t" + LastName + "\t" + Email;
 
             return description;
