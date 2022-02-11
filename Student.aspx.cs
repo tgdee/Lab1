@@ -116,8 +116,9 @@ namespace Lab1
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
-            if (txtStudFirstN.Text.Equals("")&&txtEmail.Text.Equals("")&&txtGrade.Equals("")&&txtGradYear.Equals("")&&txtPhoneNumber.Equals("")
-                &&txtMajor.Equals("")&&txtStudLastN.Text.Equals(""))
+            lblError.Text = "";
+            if (txtStudFirstN.Text.Equals("")&&txtEmail.Text.Equals("")&&txtGrade.Text.Equals("")&&txtGradYear.Text.Equals("")&&txtPhoneNumber.Text.Equals("")
+                &&txtMajor.Text.Equals("")&&txtStudLastN.Text.Equals(""))
             {
                 txtStudFirstN.Text = "Facey";
                 txtStudLastN.Text = "McFaceFace";

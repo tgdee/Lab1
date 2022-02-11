@@ -19,10 +19,10 @@ namespace Lab1
             {
                 //As the page loads we want to create an array of members
                 Session["MemberArray"] = new Member[10];
-                Session["ArrayKeeper"] = 0;
+                Session["MArrayKeeper"] = 0;
 
                 var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
-                int keeper = (int)Session["ArrayKeeper"];
+                int keeper = (int)Session["MArrayKeeper"];
                 Member[] mArray = (Member[])Session["MemberArray"];
 
                 using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
@@ -41,7 +41,7 @@ namespace Lab1
                                 string LastName = reader["LastName"].ToString();
                                 string Email = reader["Email"].ToString();
                                 mArray[keeper++] = new Member(FirstName, LastName, Email);
-                                Session["ArrayKeeper"] = keeper;
+                                Session["MArrayKeeper"] = keeper;
                                 Session["MemberArray"] = mArray;
                             }
 
@@ -85,7 +85,7 @@ namespace Lab1
             string email = txtEmail.Text.ToString();
 
             Member[] mArray = (Member[])Session["MemberArray"];
-            int keeper = (int)Session["ArrayKeeper"];
+            int keeper = (int)Session["MArrayKeeper"];
 
             mArray[keeper++] = new Member(firstName, lastName, email);
 
@@ -108,7 +108,7 @@ namespace Lab1
         protected void CommitButton_Click(object sender, EventArgs e)
         {
             Member[] mArray = (Member[])Session["MemberArray"];
-            int keeper = (int)Session["ArrayKeeper"];
+            int keeper = (int)Session["MArrayKeeper"];
 
             var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
 
