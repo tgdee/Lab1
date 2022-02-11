@@ -16,7 +16,7 @@
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>
-                <asp:Label ID="lblLastName" runat="server">
+                <asp:Label ID="lblLastName" runat="server" Text="Last Name:">
                 </asp:Label>
             </asp:TableCell>
             <asp:TableCell>
@@ -25,7 +25,7 @@
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>
-                <asp:Label ID="Email" runat="server">
+                <asp:Label ID="Email" runat="server" Text="Member Email:">
                 </asp:Label>
             </asp:TableCell>
             <asp:TableCell>
@@ -33,11 +33,11 @@
             </asp:TableCell>
         </asp:TableRow>
     </asp:Table>
-    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+    <asp:Label ID="lblError" runat="server" Text="Error"></asp:Label>
     <br />
     <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate" OnClick="PopulateButton_Click" />
     <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save" OnClick="SaveButton_Click" />
     <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Commit" OnClick="CommitButton_Click" />
     <asp:Button ID="ClearButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Clear" OnClick="ClearButton_Click" />
-    <asp:ListBox ID="lbMember" runat="server"></asp:ListBox>
+    <asp:ListBox ID="lbMember" runat="server" Style="min-width:600px" size="1"></asp:ListBox>
 </asp:Content>
