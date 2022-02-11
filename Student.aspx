@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <asp:Table runat="server" Height="187px" Width="365px">
+        <asp:Table runat="server" Height="200px" Width="500px">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Center">
                     <asp:Label ID="lblHeaderMessage" runat="server" Text="Student Information" Font-Underline="true" Font-Size="Larger"></asp:Label>
@@ -65,18 +65,25 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Table runat="server" Width="1000">
-        </asp:Table>
+        <div style="-webkit-box-align:center">
+            <br />
+            <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->" OnClick="PopulateButton_Click" />
+            <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save ->" OnClick="SaveButton_Click" />
+            <br />
+            <br />
+            <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" OnClick="CommitButton_Click" />
+            <br />
+            <br />
+        </div>
+        
+        <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"></asp:Label>
+
+        <asp:ListBox ID="lstStudentList" runat="server" style="min-width: 600px" size="1"></asp:ListBox>
+
         <br />
-        <asp:Button ID="PopulateButton" runat="server" Text="Populate ->" OnClick="PopulateButton_Click" />
         <br />
-        <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label>
-        <asp:ListBox ID="lstStudentList" runat="server" Width="1000"></asp:ListBox>
-        <br />
-        <br />
-        <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" />
-        <br />
-        <asp:Button ID="CommitButton" runat="server" Text="Commit ->" OnClick="CommitButton_Click" />
+
+
     </div>
     <div>
         <asp:SqlDataSource 
