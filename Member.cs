@@ -7,6 +7,12 @@ namespace Lab1
 {
     partial class Member
     {
+        private string firstName;
+        private string lastName;
+
+
+
+
         public int memberID { get; private set; }
         public String fName { get; private set; }
         public String lName { get; private set; }
