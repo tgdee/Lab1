@@ -72,8 +72,6 @@ namespace Lab1
                         string GraduationYear = reader["GraduationYear"].ToString();
                         string Email = reader["Email"].ToString();
                         string Major = reader["Major"].ToString();
-                        int EmployerId = Int32.Parse(reader["EmployerID"].ToString());
-                        int InternshipNumber = Int32.Parse(reader["InternshipNumber"].ToString());
                         string PhoneNumber = reader["PhoneNumber"].ToString();
                         string Grade = reader["Grade"].ToString();
                         sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
@@ -83,14 +81,42 @@ namespace Lab1
                 }
             }
 
-
-
         }
 
 
 
         protected void CommitButton_Click(object sender, EventArgs e)
         {
+            Student[] sArray = (Student[])Session["StudentArray"];
+            int keeper = (int)Session["ArrayKeeper"];
+
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                string qString = "SELECT * FROM Student";
+                SqlCommand cmd = new SqlCommand(qString, dbConnection);
+                dbConnection.Open();
+                using (SqlDataReader reader = cmd.ExecuteNonQuery())
+                {
+                    while (reader.Read())
+                    {
+
+                        int StudentId = Int32.Parse(reader["StudentID"].ToString());
+                        string FirstName = reader["FirstName"].ToString();
+                        string LastName = reader["LastName"].ToString();
+                        string GraduationYear = reader["GraduationYear"].ToString();
+                        string Email = reader["Email"].ToString();
+                        string Major = reader["Major"].ToString();
+                        string PhoneNumber = reader["PhoneNumber"].ToString();
+                        string Grade = reader["Grade"].ToString();
+                        sArray[keeper++] = new Student(StudentId, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
+                        Session["ArrayKeeper"] = keeper;
+                        Session["StudentArray"] = sArray;
+                    }
+                }
+            }
+
 
         }
 
