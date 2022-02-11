@@ -26,10 +26,16 @@
                 </asp:TableCell>
             </asp:TableRow>
          </asp:Table>
-        <asp:Button ID="Button1" runat="server" Text="Save ->" />
-        <br />
-
-        <asp:Button ID="Button2" runat="server" Text="Button" />
+         <div style="-webkit-box-align: center">
+            <br />
+            <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->" OnClick="PopulateButton_Click"  />
+            <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save ->" OnClick="SaveButton_Click" />
+            <br />
+            <br />
+            <asp:Button ID="CommitButton" runat="server" ForeColor="Black" BackColor="SkyBlue" Font-Bold="true" Text="Commit ->" OnClick="CommitButton_Click" />
+            <br />
+            <br />
+        </div>
     </div>
     <asp:SqlDataSource 
             ID="MentoringProgramSource" 
