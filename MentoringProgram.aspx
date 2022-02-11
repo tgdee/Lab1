@@ -14,7 +14,15 @@
                     <asp:Label ID="lblFirstName" runat="server" Text="Please Choose Mentor:"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" DataSourceID="MentoringProgramSource" DataTextField="MemberID" Height="10px" Width="200px" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" DataSourceID="MentoringProgramSource" DataTextField="MemberID" Height="30px" Width="200px" runat="server"></asp:DropDownList>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label2" runat="server" Text="Please Choose Mentor:"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList2" DataSourceID="MentoringProgramSource" DataTextField="MemberID" Height="30px" Width="200px" runat="server"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
          </asp:Table>
@@ -22,7 +30,12 @@
     </div>
     <asp:SqlDataSource 
             ID="MentoringProgramSource" 
-            SelectCommand="SELECT MemberID FROM DBO.Mentorship"
+            SelectCommand="SELECT FirstName,LastName FROM DBO.Mentorship"
+            ConnectionString="<%$ ConnectionStrings:Lab1 %>"
+            runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource 
+            ID="StudentTableDataSource" 
+            SelectCommand="SELECT FirstName, LastName FROM DBO.Student"
             ConnectionString="<%$ ConnectionStrings:Lab1 %>"
             runat="server"></asp:SqlDataSource>
 </asp:Content>
