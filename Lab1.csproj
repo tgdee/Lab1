@@ -111,6 +111,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Homepage.aspx" />
+    <Content Include="images\5db340cf51d14.image.jpg" />
     <Content Include="Member.aspx" />
     <Content Include="MentoringProgram.aspx" />
     <Content Include="MoreInfo.aspx" />
