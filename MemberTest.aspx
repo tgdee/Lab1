@@ -33,7 +33,7 @@
             </asp:TableCell>
         </asp:TableRow>
     </asp:Table>
-    <asp:Label ID="lblError" runat="server" Text="Error"></asp:Label>
+    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
     <br />
     <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate" OnClick="PopulateButton_Click" />
     <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save" OnClick="SaveButton_Click" />
