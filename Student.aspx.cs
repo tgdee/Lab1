@@ -28,9 +28,47 @@ namespace Lab1
             }
         }
 
+        protected int NumberOfRows()
+        {
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                int count = 0;
+                try
+                {
+                    
+                    string qString = "SELECT * FROM Student";
+                    SqlCommand cmd = new SqlCommand(qString, dbConnection);
+                    dbConnection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            count++;
+                            
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    lblError.Text = ex.Message;
+
+                }
+                finally
+                {
+                    
+                    dbConnection.Close();
+                    dbConnection.Dispose();
+                }
+                return count;
+
+            }
+
+        }
+
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            
+            int count = NumberOfRows();
             string FirstName = txtStudFirstN.Text.ToString();
             string LastName = txtStudLastN.Text.ToString();
             string Major = txtMajor.Text.ToString();
@@ -41,7 +79,7 @@ namespace Lab1
 
             Student[] sArray = (Student[])Session["StudentArray"];
             int keeper = (int)Session["ArrayKeeper"];
-            sArray[keeper++] = new Student(keeper, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
+            sArray[keeper++] = new Student(++count, FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
 
             Session["ArrayKeeper"] = keeper;
             Session["StudentArray"] = sArray;

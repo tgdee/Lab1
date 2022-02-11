@@ -93,7 +93,7 @@ namespace Lab1
         {
             String description = "";
             description += this.firstName + "\t" + this.lastName + "\t" +
-                this.graduationYear + "\t" + this.grade + "\t" + this.email + "\t";
+                this.graduationYear + "\t" + this.grade + "\t" + this.email + "\t" + Major + "\t" + Email;
             return description;
         }
 
