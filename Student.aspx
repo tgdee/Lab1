@@ -65,7 +65,7 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <div style="-webkit-box-align:center">
+        <div style="-webkit-box-align: center">
             <br />
             <asp:Button ID="PopulateButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Populate ->" OnClick="PopulateButton_Click" />
             <asp:Button ID="SaveButton" runat="server" ForeColor="Black" BackColor="YellowGreen" Font-Bold="true" Text="Save ->" OnClick="SaveButton_Click" />
@@ -75,10 +75,10 @@
             <br />
             <br />
         </div>
-        
+
         <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"></asp:Label>
 
-        <asp:ListBox ID="lstStudentList" runat="server" style="min-width: 600px" size="1"></asp:ListBox>
+        <asp:ListBox ID="lstStudentList" runat="server" Style="min-width: 600px" size="1"></asp:ListBox>
 
         <br />
         <br />
@@ -86,8 +86,8 @@
 
     </div>
     <div>
-        <asp:SqlDataSource 
-            ID="srcStudentID" 
+        <asp:SqlDataSource
+            ID="srcStudentID"
             SelectCommand="SELECT * FROM DBO.Student"
             ConnectionString="<%$ ConnectionStrings:Lab1 %>"
             runat="server"></asp:SqlDataSource>
