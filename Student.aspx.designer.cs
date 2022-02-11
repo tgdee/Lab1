@@ -33,6 +33,15 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblFirstName;
 
         /// <summary>
+        /// reqFieldValidatorFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFieldValidatorFirstName;
+
+        /// <summary>
         /// txtStudFirstN control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLastName;
+
+        /// <summary>
+        /// RequiredFieldValidatorLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorLastName;
 
         /// <summary>
         /// txtStudLastN control.
@@ -69,6 +87,15 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblMajor;
 
         /// <summary>
+        /// RequiredFieldValidatorMajor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorMajor;
+
+        /// <summary>
         /// txtMajor control.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,15 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrade;
+
+        /// <summary>
+        /// RequiredFieldValidatorGrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorGrade;
 
         /// <summary>
         /// txtGrade control.
@@ -105,6 +141,15 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblGraduationYear;
 
         /// <summary>
+        /// RequiredFieldValidatorGradYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorGradYear;
+
+        /// <summary>
         /// txtGradYear control.
         /// </summary>
         /// <remarks>
@@ -123,6 +168,15 @@ namespace Lab1
         protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
+        /// RequiredFieldValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -139,6 +193,15 @@ namespace Lab1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhoneNumber;
+
+        /// <summary>
+        /// RequiredFieldValidatorPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPhoneNumber;
 
         /// <summary>
         /// txtPhoneNumber control.

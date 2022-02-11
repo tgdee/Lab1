@@ -74,42 +74,43 @@ namespace Lab1
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            
-
-            string FirstName = txtStudFirstN.Text.ToString();
-            string LastName = txtStudLastN.Text.ToString();
-            string Major = txtMajor.Text.ToString();
-            string Grade = txtGrade.Text.ToString();
-            string PhoneNumber = txtPhoneNumber.Text.ToString();
-            string GraduationYear = txtGradYear.Text.ToString();
-            string Email = txtEmail.Text.ToString();
-
-            Student[] sArray = (Student[])Session["StudentArray"];
-            int keeper = (int)Session["ArrayKeeper"];
-            sArray[keeper++] = new Student(FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
-            Session["ArrayKeeper"] = keeper;
-            Session["StudentArray"] = sArray;
-
-
-
-            lstStudentList.Items.Clear();
-
-
-            for (int i = 0; i < keeper; i++)
+            if(reqFieldValidatorFirstName.IsValid&&RequiredFieldValidatorLastName.IsValid&&RequiredFieldValidatorMajor.IsValid&&RequiredFieldValidatorGrade.IsValid
+                &&RequiredFieldValidatorGradYear.IsValid&&RequiredFieldValidatorEmail.IsValid&&RequiredFieldValidatorPhoneNumber.IsValid)
             {
-                
-                lstStudentList.Items.Add(sArray[i].ToString());
+                string FirstName = txtStudFirstN.Text.ToString();
+                string LastName = txtStudLastN.Text.ToString();
+                string Major = txtMajor.Text.ToString();
+                string Grade = txtGrade.Text.ToString();
+                string PhoneNumber = txtPhoneNumber.Text.ToString();
+                string GraduationYear = txtGradYear.Text.ToString();
+                string Email = txtEmail.Text.ToString();
+
+                Student[] sArray = (Student[])Session["StudentArray"];
+                int keeper = (int)Session["ArrayKeeper"];
+                sArray[keeper++] = new Student(FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
+                Session["ArrayKeeper"] = keeper;
+                Session["StudentArray"] = sArray;
+
+
+
+                lstStudentList.Items.Clear();
+
+
+                for (int i = 0; i < keeper; i++)
+                {
+
+                    lstStudentList.Items.Add(sArray[i].ToString());
+                }
+
+                txtStudFirstN.Text = "";
+                txtStudLastN.Text = "";
+                txtMajor.Text = "";
+                txtGrade.Text = "";
+                txtPhoneNumber.Text = "";
+                txtGradYear.Text = "";
+                txtEmail.Text = "";
+
             }
-
-            txtStudFirstN.Text = "";
-            txtStudLastN.Text = "";
-            txtMajor.Text = "";
-            txtGrade.Text = "";
-            txtPhoneNumber.Text = "";
-            txtGradYear.Text = "";
-            txtEmail.Text = "";
-
-
 
         }
 
