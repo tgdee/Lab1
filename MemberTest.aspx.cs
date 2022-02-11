@@ -64,6 +64,7 @@ namespace Lab1
 
         protected void PopulateButton_Click(object sender, EventArgs e)
         {
+            lblError.Text = "";
             if (txtEmail.Text.Equals("") && txtFirstName.Text.Equals("") && txtLastName.Text.Equals(""))
             {
                 txtFirstName.Text = "John";
@@ -134,7 +135,9 @@ namespace Lab1
                             cmd.ExecuteNonQuery();
 
                             dbConnection.Close();
+
                         }
+                        
                     }
                 }
                 catch (Exception ex)
