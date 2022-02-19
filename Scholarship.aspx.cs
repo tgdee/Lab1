@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Lab1
+namespace Lab2
 {
     public partial class Scholarship : System.Web.UI.Page
     {
