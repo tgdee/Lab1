@@ -5,22 +5,26 @@
     <h4>
         <asp:Literal ID="ltError" runat="server"></asp:Literal>
     </h4>
-    <asp:GridView ID="gvStudent" CssClass="table" runat="server" AutoGenerateColumns="false" OnRowEditing="gvStudent_RowEditing" OnRowUpdating="gvStudent_RowUpdating" OnRowCancelingEdit="gvStudent_RowCancelingEdit">
+    <asp:GridView ID="gvStudent" CssClass="table table-striped student-table" runat="server" AutoGenerateColumns="false" OnRowEditing="gvStudent_RowEditing" OnRowUpdating="gvStudent_RowUpdating" OnRowCancelingEdit="gvStudent_RowCancelingEdit">
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
                     <asp:HiddenField ID="hdnStudentId" runat="server" Value='<%#DataBinder.Eval(Container.DataItem, "StudentID") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField />
+            <asp:BoundField DataField="FirstName" HeaderText="First Name"/>
+            <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+            <asp:BoundField DataField="Grade" HeaderText="Grade" />
+            <asp:BoundField DataField="GraduationYear" HeaderText="GraduationYear" />
+            <asp:BoundField DataField="Major" HeaderText="Major" />
+            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
+            <asp:BoundField DataField="Email" HeaderText="Email" />
+            <asp:CommandField ShowEditButton="true" />
         </Columns>
-
-
     </asp:GridView>
-    
-    
-    
-    
+         <div class="row student-table">
+            <asp:Button ID="btnAddRow" runat="server" Text="Add New Row" CssClass="btn btn-primary" OnClick="btnAddRow_Click" />
+        </div>
     <div class="jumbotron">
         <asp:Table runat="server" Height="200px" Width="500px">
             <asp:TableHeaderRow>

@@ -22,12 +22,12 @@ namespace Lab2
 
             if (!Page.IsPostBack)
             {
-                Session["StudentArray"] = new Student[10];
-                Session["ArrayKeeper"] = 0;
+
+
+
 
                 var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
-                int keeper = (int)Session["ArrayKeeper"];
-                Student[] sArray = (Student[])Session["StudentArray"];
+
                 using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
                 {
                     try
@@ -48,9 +48,7 @@ namespace Lab2
                                 string Major = reader["Major"].ToString();
                                 string PhoneNumber = reader["PhoneNumber"].ToString();
                                 string Grade = reader["Grade"].ToString();
-                                sArray[keeper++] = new Student(FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
-                                Session["ArrayKeeper"] = keeper;
-                                Session["StudentArray"] = sArray;
+
                             }
                         }
 
@@ -92,20 +90,9 @@ namespace Lab2
             string GraduationYear = txtGradYear.Text.ToString();
             string Email = txtEmail.Text.ToString();
 
-            Student[] sArray = (Student[])Session["StudentArray"];
-            int keeper = (int)Session["ArrayKeeper"];
-            sArray[keeper++] = new Student(FirstName, LastName, GraduationYear, Grade, Email, Major, PhoneNumber);
-            Session["ArrayKeeper"] = keeper;
-            Session["StudentArray"] = sArray;
 
             lstStudentList.Items.Clear();
 
-
-            for (int i = 0; i < keeper; i++)
-            {
-
-                lstStudentList.Items.Add(sArray[i].ToString());
-            }
 
             txtStudFirstN.Text = "";
             txtStudLastN.Text = "";
@@ -153,7 +140,7 @@ namespace Lab2
             Student[] sArray = (Student[])Session["StudentArray"];
             int keeper = (int)Session["ArrayKeeper"];
 
-            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
 
             using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
             {
@@ -229,17 +216,116 @@ namespace Lab2
 
         protected void gvStudent_RowEditing(object sender, GridViewEditEventArgs e)
         {
+            ltError.Text = string.Empty;            // Set error literal to empty in case of previous errors
+            gvStudent.EditIndex = e.NewEditIndex;   // Set the edit index to the passed in GridViewEditEventArgs
+            BindDataToGridView();                   // Bind edited data to grid
 
         }
 
         protected void gvStudent_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            ltError.Text = string.Empty;
+            GridViewRow gvRow = (GridViewRow)gvStudent.Rows[e.RowIndex];
+            HiddenField hdnStudentId = (HiddenField)gvRow.FindControl("hdnStudentId");
+            TextBox txtFirstName = (TextBox)gvRow.Cells[1].Controls[0];
+            TextBox txtLastName = (TextBox)gvRow.Cells[2].Controls[0];
+            TextBox txtGrade = (TextBox)gvRow.Cells[3].Controls[0];
+            TextBox txtGraduationYear = (TextBox)gvRow.Cells[4].Controls[0];
+            TextBox txtMajor = (TextBox)gvRow.Cells[5].Controls[0];
+            TextBox txtPhoneNumber = (TextBox)gvRow.Cells[6].Controls[0];
+            TextBox txtEmail = (TextBox)gvRow.Cells[7].Controls[0];
+
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
+
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                try
+                {
+                    dbConnection.Close();
+                    string sql = string.Format("UPDATE Student SET FirstName='{0}', LastName='{1}', Grade='{2}', GraduationYear='{3}', Major='{4}'" +
+                        ", PhoneNumber='{5}', Email='{6}' WHERE StudentID={7}", txtFirstName.Text, txtLastName.Text, txtGrade.Text, txtGraduationYear.Text,
+                        txtMajor.Text, txtPhoneNumber.Text, txtEmail.Text, hdnStudentId.Value);
+                    SqlCommand command = new SqlCommand(sql, dbConnection);
+                    command.ExecuteNonQuery();
+                    gvStudent.EditIndex = -1;
+                    BindDataToGridView();
+                }
+                catch(Exception ex)
+                {
+                    ltError.Text = ex.Message;
+                }
+                finally
+                {
+                    dbConnection.Close();
+                }
+            }
+
 
         }
 
         protected void gvStudent_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
+            gvStudent.EditIndex = -1;
+            BindDataToGridView();
+        }
 
+        protected void btnAddRow_Click(object sender, EventArgs e)
+        {
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
+
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                try
+                {
+                    dbConnection.Open();
+                    SqlCommand command = new SqlCommand("INSERT INTO Student (FirstName, LastName, Grade, GraduationYear, Major," +
+                        " PhoneNumber, Email) VALUES ('', '', '', '', '', '', '')", dbConnection);
+                    command.ExecuteNonQuery();
+                    BindDataToGridView();
+                }
+                catch (Exception ex)
+                {
+                    ltError.Text = ex.Message;
+                }
+                finally
+                {
+                    dbConnection.Close();
+                    dbConnection.Dispose();
+                }
+            }
+
+        }
+
+
+        protected void BindDataToGridView()
+        {
+            var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
+
+            using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
+            {
+                try
+                {
+                    dbConnection.Open();
+                    SqlCommand command = new SqlCommand("SELECT FirstName, LastName, Grade, GraduationYear, Major, PhoneNumber, Email FROM Student ORDER BY StudentID", dbConnection);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    if(dataSet.Tables[0].Rows.Count > 0)    // Checks if there are rows present in the dataset
+                    {
+                        gvStudent.DataSource = dataSet;
+                        gvStudent.DataBind();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    ltError.Text = "Error: " + ex.Message;
+                }
+                finally
+                {
+                    dbConnection.Close();
+                    dbConnection.Dispose();
+                }
+            }
         }
     }
 }
