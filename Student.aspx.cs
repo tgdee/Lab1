@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 using System.Web.Configuration;
 
 
-namespace Lab1
+namespace Lab2
 {
     public partial class _Default : Page
     {
@@ -25,7 +25,7 @@ namespace Lab1
                 Session["StudentArray"] = new Student[10];
                 Session["ArrayKeeper"] = 0;
 
-                var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+                var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
                 int keeper = (int)Session["ArrayKeeper"];
                 Student[] sArray = (Student[])Session["StudentArray"];
                 using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))

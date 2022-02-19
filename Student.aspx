@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Student Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab1._Default" %>
+﻿<%@ Page Title="Student Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab2._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
@@ -98,7 +98,7 @@
         <asp:SqlDataSource
             ID="srcStudentID"
             SelectCommand="SELECT * FROM DBO.Student"
-            ConnectionString="<%$ ConnectionStrings:Lab1 %>"
+            ConnectionString="<%$ ConnectionStrings:Lab2 %>"
             runat="server"></asp:SqlDataSource>
     </div>
 </asp:Content>
