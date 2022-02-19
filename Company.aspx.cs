@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 
-namespace Lab1
+namespace Lab2
 {
     public partial class Company : System.Web.UI.Page
     {
@@ -20,7 +20,7 @@ namespace Lab1
                 Session["CompanyArray"] = new Company[10];
                 Session["CompanyKeeper"] = 0;
 
-                var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab1"];
+                var connectionFromConfiguration = WebConfigurationManager.ConnectionStrings["Lab2"];
                 int keeper = (int)Session["CompanyKeeper"];
                 Company[] cArray = (Company[])Session["CompanyArray"];
                 using (SqlConnection dbConnection = new SqlConnection(connectionFromConfiguration.ConnectionString))
