@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 
-namespace Lab1
+namespace Lab2
 {
     public partial class Company : System.Web.UI.Page
     {

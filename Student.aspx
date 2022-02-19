@@ -1,6 +1,26 @@
 ﻿<%@ Page Title="Student Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Lab2._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h1>Student Information Page</h1>
+    <h4>
+        <asp:Literal ID="ltError" runat="server"></asp:Literal>
+    </h4>
+    <asp:GridView ID="gvStudent" CssClass="table" runat="server" AutoGenerateColumns="false" OnRowEditing="gvStudent_RowEditing" OnRowUpdating="gvStudent_RowUpdating" OnRowCancelingEdit="gvStudent_RowCancelingEdit">
+        <Columns>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:HiddenField ID="hdnStudentId" runat="server" Value='<%#DataBinder.Eval(Container.DataItem, "StudentID") %>' />
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField />
+        </Columns>
+
+
+    </asp:GridView>
+    
+    
+    
+    
     <div class="jumbotron">
         <asp:Table runat="server" Height="200px" Width="500px">
             <asp:TableHeaderRow>

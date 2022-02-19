@@ -226,5 +226,20 @@ namespace Lab2
             lstStudentList.Items.Clear();
 
         }
+
+        protected void gvStudent_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
+        }
+
+        protected void gvStudent_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
+
+        protected void gvStudent_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+
+        }
     }
 }
